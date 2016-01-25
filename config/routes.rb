@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
 
-  resources :properties
-  
-  get 'home/index'
+  get '/admin' => 'admin#index'
 
-  get 'home/development' => 'home#develop'
+  resources :properties, path: 'admin/properties'
+  
+  get '/home' => 'home#index'
+
+  get '/home/development' => 'home#develop'
+
+  get '/listing' => 'home#listing'
+
+  get '/landing' => 'home#landing'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

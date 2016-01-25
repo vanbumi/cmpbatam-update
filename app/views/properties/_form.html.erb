@@ -49,7 +49,17 @@
     <%= f.attachinary_file_field :images %>
   </div>
 
+  <div id="image_url"></div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<script>
+  $function() {
+    $('.actions').click(function() {
+      $('#image_url').append();
+    });
+  };
+</script>
