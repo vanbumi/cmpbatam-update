@@ -1,0 +1,50 @@
+<section id="work" class="page-section page">
+  <div class="container text-center">
+    <div class="heading">
+      <h2>Kami menyediakan Property terbaik untuk anda</h2>
+      <p>Silahkan anda lihat listing Properti terbaru kami dan fasilitasnya, CMP Batam telah menjual lebih dari 5000 jenis dan tipe Properti. Kami harap anda dapat menemukan rumah, kantor, tempat idaman yang sesuai, itu semua harapan kami</p>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+      
+      <% @properties.each do |property| %>
+        <% property.images.each do |image| %>
+      <!-- first column -->
+        <div class="col-sm-6 col-display text-center">
+          <article class="property-item clearfix">
+            <h4 class="text-left"><a href="http://www.pdsbatam.com/property/villa-sempurna-1/" title="Villa Sempurna 1"><%= property.name %></a> | <span><i class="fa fa-check"></i>&nbsp;Dijual</span> </h4>
+              <div class="row row-top">
+                <div class="col-sm-5 col-left img text-center">
+                  <!-- <div class="gambar"> -->
+                    <%= cl_image_tag(image.path, { size: '325x225', crop: :fit }) %>
+                </div>
+                <div class="col-sm-5 col-right text-left">
+                  <div class="row row-right">  
+                    <h5><i class="fa fa-tags"></i>&nbsp;Harga</h5>
+                  </div>
+                  <div class="row row-right-bottom">  
+                    <ul class="list-unstyled">
+                      <li><i class="fa fa-home"></i>&nbsp;Type: Rumah</li>
+                      <li><i class="fa fa-compass"></i>&nbsp;Arah: Selatan</li>
+                      <li><i class="fa fa-map-marker"></i>&nbsp;Lokasi: </li>
+                    </ul>
+                    <!-- <button class="btn btn-default btn-xs">More Details</button> -->
+                    <p><a href="#">More Details</a></p>
+                  </div> 
+                </div>
+              </div>
+              <div class="row row-bottom text-left">
+                  <span><i class="fa fa-expand"></i>&nbsp;36/72</span> |
+                  <span><i class="fa fa-bed"></i>&nbsp;2&nbsp;Bedrooms</span> |
+                  <span><i class="fa fa-tint"></i>&nbsp;1&nbsp;Bathroom</span>        
+              </div>
+          </article>
+        </div>  
+      <!-- #first column -->
+        <% end %>
+      <% end %>
+       
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section>

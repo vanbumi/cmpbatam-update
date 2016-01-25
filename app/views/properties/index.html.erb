@@ -7,9 +7,9 @@
     <tr>
       <th>Image</th>
       <th>Name</th>
-      <th>Location</th>
+      <!-- <th>Location</th>
       <th>Status</th>
-      <th>Property type</th>
+      <th>Property type</th> -->
       <th>Bedroom</th>
       <th>Bathroom</th>
       <th>Price</th>
@@ -27,10 +27,16 @@
             <%= cl_image_tag(image.path, { size: '125x125', crop: :fit }) %>
           <% end %>
         </td>
-        <td><%= property.name %></td>
-        <td><%= property.location %></td>
-        <td><%= property.status %></td>
-        <td><%= property.property_type %></td>
+        
+        <td>
+          <dl>
+            <dt><%= property.name %></dt>
+            <dd><%= property.location %></dd>
+            <dd><%= property.status %></dd>
+            <dd><%= property.property_type %></dd>
+            <dd></dd>
+          </dl>
+        </td>
         <td><%= property.bedroom %></td>
         <td><%= property.bathroom %></td>
         <td><%= property.price %></td>
