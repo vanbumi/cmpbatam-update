@@ -1,50 +1,69 @@
-<p id="notice"><%= notice %></p>
+<style>
+  p {
+    background-color: #f4f4f4;
+  }
+</style>
 
+<div class="container">  
+  <div class="col-md-8 col-sm-9">  
+    <p id="notice"><%= notice %></p>
 
+    <p>
+      <% @property.images.each do |image| %>
+        <%= cl_image_tag(image.path, { size: '', crop: :fit }) %>
+      <% end %>  
+    </p>
+    
+    <p>
+      <strong>Name:</strong>
+      <h3><%= @property.name %></h3>
+    </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @property.name %>
-</p>
+    <p>
+      <strong>Alias:</strong>
+      <%= @property.slug %>
+    </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @property.location %>
-</p>
+    <p>
+      <strong>Location:</strong>
+      <h4><%= @property.location %></h4>
+    </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @property.status %>
-</p>
+    <p>
+      <strong>Status:</strong>
+      <h4><%= @property.status %></h4> 
+    </p>
 
-<p>
-  <strong>Property type:</strong>
-  <%= @property.property_type %>
-</p>
+    <p>
+      <strong>Property type:</strong>
+      <h4><%= @property.property_type %></h4>  
+    </p>
 
-<p>
-  <strong>Bedroom:</strong>
-  <%= @property.bedroom %>
-</p>
+    <p>
+      <strong>Bedroom:</strong>
+      <h4><%= @property.bedroom %></h4>  
+    </p>
 
-<p>
-  <strong>Bathroom:</strong>
-  <%= @property.bathroom %>
-</p>
+    <p>
+      <strong>Bathroom:</strong>
+      <h4><%= @property.bathroom %></h4>
+    </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @property.price %>
-</p>
+    <p>
+      <strong>Price:</strong>
+      <h4><%= number_to_currency(@property.price, precision: 0, unit: "Rp.", separator: "", delimiter: ".") %></h4>  
+    </p>
 
-<p>
-  <strong>Area:</strong>
-  <%= @property.area %>
-</p>
+    <p>
+      <strong>Area:</strong>
+      <h4><%= @property.area %></h4>
+    </p>
 
-<% @property.images.each do |image| %>
-    <%= cl_image_tag(image.path, { size: '125x125', crop: :fit }) %>
-<% end %>
-<br>
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+    
+    <br>
+    <%= link_to 'Edit', edit_property_path(@property) %> |
+    <%= link_to 'Back', properties_path %>
+    <br><br>
+
+  </div>  
+</div>

@@ -1,5 +1,5 @@
 <!-- header -->
-<%= render 'header' %>
+<%= render 'shared/header' %>
 
 <div id="#top"></div>
 
@@ -7,72 +7,13 @@
 <%= render 's_home' %>
 
 <!-- section services -->
-<%= render 's_services' %>
+<% render 's_services' %>
 
 <!-- section about -->
-<%= render 's_about' %> 
+<% render 's_about' %> 
 
 <!-- section list / work -->
-<style>
-  .row-list {
-    /*border: 1px solid #ccc;*/
-  }
-  .artikel {
-    /*border: 1px solid #ff0000;*/
-    /*background-color: #eee;*/ 
-    padding-bottom: 30px;
-  }
-  
-
-</style>
-
-<section id="work" class="page-section page">
-  <!-- <div class="container text-center">
-    <div class="row row-list">
-      
-      <div class="col-md-6 col-luar">
-        <div class="judul">
-          Judul
-        </div>
-        <div class="row artikel">
-          <div class="col-md-6 kiri">
-            <img src="http://res.cloudinary.com/medioxtra/image/upload/c_scale,h_250,w_400/v1453455477/ainiuzb528uimtodcuhl.jpg" alt="">
-          </div>
-          <div class="col-md-6 kanan">
-            <div class="row row-kanan">
-              row kanan
-            </div>
-              Tulisan
-              Tulisan
-              Tuilisa
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div> -->
-    <div class="container text-center">  
-      <div class="row row-list">
-        
-        <% @properties.each do |property| %>
-          <% property.images.each do |image| %>
-            <div class="col-sm-6 col-md-4 artikel">
-              <div class="thumbnail">
-                <%= cl_image_tag(image.path ) %>
-                <div class="caption text-left">
-                  <h3>Thumbnail label</h3>
-                  <p>Tulisan tulisan</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
-        
-      </div>
-    </div>
-</section>
+<%= render 's_work' %>
 
 <!-- section plan / price -->
 
@@ -82,7 +23,7 @@
 <%= render 's_contact' %>
 
 <!-- footer -->
-<%= render 'footer' %>
+<%= render 'shared/footer' %>
 
 <!--/.page-section-->
 

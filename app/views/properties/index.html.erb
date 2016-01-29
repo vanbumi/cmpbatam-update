@@ -1,54 +1,78 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Properties</h1>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Name</th>
-      <!-- <th>Location</th>
-      <th>Status</th>
-      <th>Property type</th> -->
-      <th>Bedroom</th>
-      <th>Bathroom</th>
-      <th>Price</th>
-      <th>Area</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-
-    <% @properties.each do |property| %>
+<div class="col-md-8 col-sm-9">  
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-md-5">
+      <h1>Listing Properties</h1>    
+    </div>
+    <div class="col-md-7 text-right">
+      <%= form_tag properties_path, :method => 'get' do %>
+        <p>
+          <%= text_field_tag :search, params[:search], :placeholder => 'Nama Property' %>
+          <%= submit_tag "Search", :name => nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  
+  <br>
+  <i class="fa fa-plus-square-o fa-lg"></i>&nbsp;<%= link_to 'Add Property', new_property_path %>
+  <table class="table">
+    <thead>
       <tr>
-        <td>
-          <% property.images.each do |image| %>
-            <%= cl_image_tag(image.path, { size: '125x125', crop: :fit }) %>
-          <% end %>
-        </td>
-        
-        <td>
-          <dl>
-            <dt><%= property.name %></dt>
-            <dd><%= property.location %></dd>
-            <dd><%= property.status %></dd>
-            <dd><%= property.property_type %></dd>
-            <dd></dd>
-          </dl>
-        </td>
-        <td><%= property.bedroom %></td>
-        <td><%= property.bathroom %></td>
-        <td><%= property.price %></td>
-        <td><%= property.area %></td>
-        <td><%= link_to 'Show', property %></td>
-        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- <th>Image</th> -->
+        <!-- <th>Name</th> -->
+        <!-- <th>Location</th>
+        <th>Status</th>
+        <th>Property type</th> -->
+        <!-- <th>Bedroom</th>
+        <th>Bathroom</th>
+        <th>Price</th>
+        <th>Area</th> -->
+        <!-- <th colspan="3">Actions</th> -->
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
 
-<%= link_to 'New Property', new_property_path %>
+      <% @properties.each do |property| %>
+        <tr>
+          <td>
+            <% property.images.each do |image| %>
+              <%= cl_image_tag(image.path, { size: '325x325', crop: :fit }) %>
+            <% end %>
+          </td>
+          
+          <td>
+            <dl>
+              <dt><h3><%= property.name %></h3></dt>
+              <p>Alias:<%= property.slug %></p>
+              <dd><i class="fa fa-calendar"></i>&nbsp;<span class='label label-primary'>Tanggal: <%= property.created_at.strftime(" %d %B %Y, %H:%M ") %></span></dd>
+              <dd><i class="fa fa-check"></i>&nbsp;Lokasi: <%= property.location %></dd>
+              <dd><i class="fa fa-check"></i>&nbsp;Satus: <%= property.status %></dd>
+              <dd><i class="fa fa-check"></i>&nbsp;Type:  <%= property.property_type %></dd>
+              <dd><i class="fa fa-check"></i>&nbsp;Bedroom: <%= property.bedroom %></dd>
+              <dd><i class="fa fa-check"></i>&nbsp;Bathroom: <%= property.bathroom %></dd>
+              <dd><i class="fa fa-check"></i>&nbsp;Luas area: <%= property.area %></dd>
+              <!-- <dd><i class="fa fa-check"></i>&nbsp;Harga Rp.: <h4><%= property.price %></h4></dd> -->
+              <dd><i class="fa fa-check"></i>&nbsp;Harga Rp.: <h4><%= number_to_currency(property.price, precision: 0, unit: "Rp.", separator: "", delimiter: ".") %></h4></dd>
+
+              
+            
+            </dl>
+          </td>
+          
+          <td><i class="fa fa-eye"></i>&nbsp;<%= link_to 'Show', property %></td>
+          <td><i class="fa fa-pencil-square-o"></i><%= link_to 'Edit', edit_property_path(property) %></td>
+          <td><i class="fa fa-trash"></i>&nbsp;<%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  
+  <%= will_paginate @posts, :style => 'color:blue' %>
+
+  <br><br>
+  <%= link_to 'New Property', new_property_path %>
+  <br><br>    
+</div>

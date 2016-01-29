@@ -9,17 +9,10 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!--[if lt IE 9]> 
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	    <![endif]-->
+	
 	<meta name="description" content="">
 	<meta name="author" content="WebThemez">
-	<!--[if lt IE 9]>
-	        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	    <![endif]-->
-	<!--[if lte IE 8]>
-			<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
-		<![endif]-->
+	
 	<link rel="stylesheet" href="/theme/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="/theme/css/isotope.css" media="screen" />
 	<link rel="stylesheet" href="/theme/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
@@ -29,23 +22,31 @@
 	<link rel="stylesheet" href="/theme/css/styles.css" />
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-	<!-- react -->
-	
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
-    
+    <style type="text/css">
+        body{margin-top:50px;}
+        .glyphicon { margin-right:10px; }
+        .panel-body { padding:0px; }
+        .panel-body table tr td { padding-left: 15px }
+        .panel-body .table {margin-bottom: 0px; }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 
 
 </head>
 
 <body>
+	<%= render 'shared/navbar_admin' %>
 
-	<%= yield %>
+	<div class="row">
+        <div class="col-sm-3 col-md-3">
+            <%= render 'shared/menu_admin' %>
+        </div>
+    	<%= yield %>    
+    </div>
+
+	
 
 </body>
 </html>

@@ -13,35 +13,39 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :alias %><br>
+    <%= f.text_field :slug, class:"form-control" %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.text_field :location, class:"form-control" %>
   </div>
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.text_field :status, class:"form-control" %>
   </div>
   <div class="field">
     <%= f.label :property_type %><br>
-    <%= f.text_field :property_type %>
+    <%= f.text_field :property_type, class:"form-control" %>
   </div>
   <div class="field">
     <%= f.label :bedroom %><br>
-    <%= f.number_field :bedroom %>
+    <%= f.number_field :bedroom, class:"form-control" %>
   </div>
   <div class="field">
     <%= f.label :bathroom %><br>
-    <%= f.number_field :bathroom %>
+    <%= f.number_field :bathroom, class:"form-control" %>
   </div>
   <div class="field">
     <%= f.label :price %><br>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, class:"form-control" %>
   </div>
   <div class="field">
     <%= f.label :area %><br>
-    <%= f.text_field :area %>
+    <%= f.text_field :area, class:"form-control" %>
   </div>
 
   <div class="field">
@@ -50,9 +54,9 @@
   </div>
 
   <div id="image_url"></div>
-
+  <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class:"btn btn-lg btn-primary" %>
   </div>
 <% end %>
 

@@ -1,11 +1,20 @@
 class PropertiesController < ApplicationController
+
+  layout "admin_layout"
+
   before_action :set_property, only: [:show, :edit, :update, :destroy]
 
   # GET /properties
   # GET /properties.json
   def index
-    @properties = Property.all
+    @properties = Property.search(params[:search]).order("created_at DESC").page(params[:page]).per_page(5)
+    
   end
+
+  # def property_name
+  #   property_name = params[:property_name] # yang di input atawa hasil input
+  #   @datas = Property.where("name like '% "+property_name+" %' ")
+  # end
 
   # GET /properties/1
   # GET /properties/1.json
@@ -69,6 +78,6 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:name, :location, :status, :property_type, :bedroom, :bathroom, :price, :area,  images: [])
+      params.require(:property).permit(:name, :slug, :location, :status, :property_type, :bedroom, :bathroom, :price, :area,  images: [])
     end
 end

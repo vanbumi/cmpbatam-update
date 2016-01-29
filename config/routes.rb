@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
-  get '/admin' => 'admin#index'
+  get 'single/index'
+  get ':slug' => 'single#index'
+
+  get 'admin/dashboard' => 'admin#index'
 
   resources :properties, path: 'admin/properties'
+  get '/properties/name' => 'properties#name'
+  get '/properties/property_name' => 'properties#property_name'
   
   get '/home' => 'home#index'
 
@@ -10,7 +15,7 @@ Rails.application.routes.draw do
 
   get '/listing' => 'home#listing'
 
-  get '/landing' => 'home#landing'
+  get 'landing' => 'home#landing'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -18,7 +23,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    # root 'home#index'
-   root 'home#develop'
+   root 'home#landing'
 
    mount Attachinary::Engine => "/attachinary"
    
