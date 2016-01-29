@@ -22,8 +22,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   # root 'home#index'
-   root 'home#landing'
+   root 'home#develop'
+   # root 'home#landing'
 
    mount Attachinary::Engine => "/attachinary"
    
