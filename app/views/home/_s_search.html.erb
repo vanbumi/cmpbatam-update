@@ -1,0 +1,54 @@
+<section id="search">
+
+  <div class="container">
+
+    <style>
+      .form-search {
+        border: 1px solid #eeeeee;
+        padding: 10px;
+      }
+    </style>
+
+
+   <!-- Heading -->
+   <h3>Search here</h3>
+
+
+    <div class="form-search">
+      <%= search_form_for @q do |f| %>
+        <div class="row">
+          <div class="col-lg-3">
+            <%= f.search_field :location_cont, class:'form-control', :placeholder => "Property Location" %>
+          </div>
+          <div class="col-lg-3">
+            <%= f.search_field :status_cont, class:'form-control', :placeholder => "Property Status" %>
+          </div>
+          <div class="col-lg-3">
+            <%= f.search_field :property_type_cont, class:'form-control', :placeholder => "Property Type" %>
+          </div>
+          <div class="col-lg-3">
+            <%= f.search_field :bedroom_eq, class:'form-control', :placeholder => "Min Bedroom" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+            <%= f.search_field :bathroom_eq, class:'form-control', :placeholder => "Min Bathroom" %>
+          </div>
+          <div class="col-lg-3">
+            <%= f.search_field :price_gteq, class:'form-control', :placeholder => "Min Price" %>
+          </div>
+          <div class="col-lg-3">
+            <%= f.search_field :price_lteq, class:'form-control', :placeholder => "Max Price" %>
+          </div>
+          <div class="col-lg-3">
+            <%= f.search_field :area_eq, class:'form-control', :placeholder => "Min Luas Area" %>
+          </div>
+        </div>
+
+      <div class="actions"><%= f.submit %></div>
+      <% end %>
+
+    </div>
+
+  </div>
+</section>

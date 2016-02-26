@@ -1,0 +1,60 @@
+<style>
+  .row-list {
+    /*border: 1px solid #ccc;*/
+  }
+  .artikel {
+    /*border: 1px solid #ff0000;*/
+    /*background-color: #eee;*/ 
+    padding-bottom: 30px;
+  }
+  
+
+</style>
+
+<section id="work" class="page-section page">
+    <div class="container">
+      
+    <h1>Display</h1>
+
+    <div ng-controller="myController">
+      <h2>{{ message }}</h2>   
+
+      
+      <ul ng-repeat="property in properties">
+        <li><h3><a href="#">{{ property.name }}</a></h3></li>
+        <li>Lokasi: {{ property.location }}</li>
+        <li>Status: {{ property.status }}</li>
+        <li>Tipe: {{ property.property_type }}</li>
+        <li>KM: {{ property.bathroom }}</li>
+        <li>KT: {{ property.price }}</li>
+        <li>Luas: {{ property.area }}</li>
+        <li>Harga: {{ property.price }}</li>
+        <li>Gambar: </li>
+          
+      </ul>
+        
+
+    </div>
+    
+      <div class="row row-list">
+        
+        
+            <div class="col-sm-6 col-md-4 artikel">
+              <div class="thumbnail">
+                <img src="" alt="">
+                
+                <div class="caption text-left">
+                  <h3>Property Name</h3>
+                  <ul class="list-unstyled">
+                    <li>Type: </li>
+                    <li>Luas: </li>
+                  </ul>
+                  <p><a href="" class="btn btn-primary" role="button">lihat detail</a></p>
+                </div>
+              </div>
+            </div>
+          
+        
+      </div>
+    </div>
+</section>

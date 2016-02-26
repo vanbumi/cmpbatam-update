@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3925330474">
+    <data-source source="LOCAL" name="Rails cmpbatam: production" uuid="54e8abdd-b92e-44cc-b1ff-f2f93ac5a047">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:cmpbatam_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails cmpbatam: development" uuid="bdbfea83-f78a-4156-9a83-a890163128f1">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/cmpbatam_dev</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
+      </explain-plan-config>
+    </data-source>
+  </component>
+</project>

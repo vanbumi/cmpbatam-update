@@ -2,19 +2,18 @@ class PropertiesController < ApplicationController
 
   layout "admin_layout"
 
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_property, only: [:show, :edit, :update, :destroy]
 
   # GET /properties
   # GET /properties.json
   def index
-    @properties = Property.search(params[:search]).order("created_at DESC").page(params[:page]).per_page(5)
+    @q = Property.ransack(params[:q])
+    @properties = @q.result.order("created_at DESC").page(params[:page]).per_page(5)
+    
+    # @properties = Property.search(params[:search]).order("created_at DESC").page(params[:page]).per_page(5)
     
   end
-
-  # def property_name
-  #   property_name = params[:property_name] # yang di input atawa hasil input
-  #   @datas = Property.where("name like '% "+property_name+" %' ")
-  # end
 
   # GET /properties/1
   # GET /properties/1.json

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails cmpbatam: production" uuid="54e8abdd-b92e-44cc-b1ff-f2f93ac5a047">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails cmpbatam: development" uuid="bdbfea83-f78a-4156-9a83-a890163128f1">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

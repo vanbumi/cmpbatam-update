@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get 'single/index'
   get ':slug' => 'single#index'
 
@@ -13,9 +14,10 @@ Rails.application.routes.draw do
 
   get '/home/development' => 'home#develop'
 
+  # we use this
   get '/listing' => 'home#listing'
 
-  get 'landing' => 'home#landing'
+  get 'landing/index' => 'home#landing'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -23,6 +25,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'home#develop'
+
+   # we use this on production ----->
    # root 'home#landing'
 
    mount Attachinary::Engine => "/attachinary"

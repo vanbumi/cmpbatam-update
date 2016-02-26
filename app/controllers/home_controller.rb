@@ -12,7 +12,7 @@ class HomeController < ApplicationController
   end
 
   def landing
-  	@properties = Property.all
+  	@properties = Property.order("created_at DESC")
   end
 
 end

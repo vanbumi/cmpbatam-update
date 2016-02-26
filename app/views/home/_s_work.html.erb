@@ -29,10 +29,13 @@
           <% property.images.each do |image| %>
             <div class="col-sm-6 col-md-4 artikel">
               <div class="thumbnail">
-                <%= cl_image_tag(image.path ) %>
+                <%= cl_image_tag(image.path, { size: '348x230', crop: :fit }) %>
                 <div class="caption text-left">
-                  <h3>Thumbnail label</h3>
-                  <p>Tulisan tulisan</p>
+                  <h3><%= property.name %></h3>
+                  <ul class="list-unstyled">
+                    <li>Type: <%= property.property_type %></li>
+                    <li>Luas: <%= property.area %></li>
+                  </ul>
                   <p><a href="/<%= property.slug %>" class="btn btn-primary" role="button">lihat detail</a></p>
                 </div>
               </div>

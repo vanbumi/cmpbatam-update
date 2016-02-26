@@ -9,12 +9,33 @@
       <div id="main-nav" class="collapse navbar-collapse">
         <ul class="nav navbar-nav" id="mainNav">
           <li><a href="/" class="scroll-link">Home</a></li>
-          <li><a href="#services" class="scroll-link">Services</a></li>
+          <!-- <li><a href="#search" class="scroll-link">Search</a></li> -->
+          <li><a href="#search" class="scroll-link">Search</a></li>
           <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
           <li><a href="#work" class="scroll-link">Projects</a></li>
           <li><a href="#plans" class="scroll-link">Price</a></li>
           <li><a href="#team" class="scroll-link">Team</a></li>
           <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
+          <% if user_signed_in? %>
+              <li>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+              </li>
+          <% else %>
+              <li>
+                <%= link_to('Login', new_user_session_path)  %>
+              </li>
+          <% end %>
+          <!--registration-->
+          <% if user_signed_in? %>
+              <li>
+                <%= link_to('Edit registration', edit_user_registration_path) %>
+              </li>
+          <% else %>
+              <li>
+                <%= link_to('Register', new_user_registration_path)  %>
+              </li>
+          <% end %>
+
         </ul>
       </div>
       <!--/.navbar-collapse--> 
