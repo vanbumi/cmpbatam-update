@@ -1,9 +1,109 @@
     
-<div class="col-sm-9 col-md-9">
-    <div class="well">
-        <h1>
-            Accordion Menu With Icon</h1>
-        Admin Dashboard Accordion Menu
+<div class="col-sm-9 col-lg-9" style="margin-top: 20px">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-lg-6 col-xs-12">
+          <div class="panel panel-info ">
+            <div class="panel-heading">
+              <h3 class="panel-title"><button class="btn btn-info" type="button">
+                <span class="badge"><%= @jumlah_prop %></span>
+              </button></h3>
+            </div>
+            <div class="panel-body">
+              <h2><span style="color: #39B3D7" class="glyphicon glyphicon-home" aria-hidden="true">
+                    <span style="color:#4a4a4a">Property List</span>
+                  </span>
+              </h2>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xs-12">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title"><button class="btn btn-info" type="button">
+                <span class="badge"><%= @jumlah_banner %></span>
+              </button></h3>
+            </div>
+            <div class="panel-body">
+              <h2><span class="glyphicon glyphicon-picture" aria-hidden="true">&nbsp;Banner Images</span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><button class="btn btn-info" type="button">
+                <span class="badge"><%= @jumlah_user %></span>
+              </button></h3>
+            </div>
+            <div class="panel-body">
+              <h2><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;User List</span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><button class="btn btn-info" type="button">
+                <span class="badge">4</span>
+              </button></h3>
+            </div>
+            <div class="panel-body">
+              <h2><span class="glyphicon glyphicon-inbox" aria-hidden="true">&nbsp;Inbox</span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-xs-12">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title"><button class="btn btn-info" type="button">
+                <span class="badge"><%= @jumlah_user %></span>
+              </button></h3>
+            </div>
+            <div class="panel-body">
+              <h2><span class="glyphicon glyphicon-usd" aria-hidden="true">&nbsp;Sales</span></h2>
+              <span style="color: #39b3d7"> ( Premium <i class="glyphicon glyphicon-star"></i>)</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xs-12">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title"><button class="btn btn-info" type="button">
+                <span class="badge">4</span>
+              </button></h3>
+            </div>
+            <div class="panel-body">
+              <h2><span class="glyphicon glyphicon-check" aria-hidden="true">&nbsp;Customer</span></h2>
+              <span style="color: #39b3d7"> ( Premium <i class="glyphicon glyphicon-star"></i>)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" ng-controller="myController">
+
+        <div>
+          <fusioncharts
+          width="300"
+          height="200"
+          type="pie3d"
+          datasource="{{myDataSource}}"
+          ></fusioncharts>
+        </div>
+
+      </div>
+
     </div>
+
+
+
 </div>
 

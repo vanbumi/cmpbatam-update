@@ -1,0 +1,53 @@
+<div class="panel-heading">
+  <h4 class="panel-title">
+    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-search">
+                  </span>Search here!</a>
+  </h4>
+</div>
+
+<div id="collapseOne" class="panel-collapse collapse">
+  <div class="panel-body">
+
+    <%= search_form_for @q do |f|   %>
+        <div class="field panel-search">
+          <%= f.search_field :name_cont, class:'form-control', placeholder:'Name' %>
+        </div>
+
+        <div class="field panel-search">
+          <%= f.search_field :location_cont, class:'form-control', placeholder:'Location' %>
+        </div>
+
+        <div class="field panel-search">
+          <%= f.search_field :status_cont, class:'form-control', placeholder:'Status' %>
+        </div>
+
+        <div class="field panel-search">
+          <%= f.search_field :property_type_cont, class:'form-control', placeholder:'Type' %>
+        </div>
+
+        <div class="field panel-search">
+          <%= f.search_field :bedroom_eq, class:'form-control', placeholder:'Bedroom' %>
+        </div>
+
+        <div class="field panel-search">
+          <%= f.search_field :bathroom_eq, class:'form-control', placeholder:'Bathroom' %>
+        </div>
+
+        <div class="field panel-search">
+          <%= f.search_field :price_gteq, class:'form-control', :placeholder => "Price From" %>
+        </div>
+        <div class="field panel-search">
+          <%= f.search_field :price_lteq, class:'form-control', :placeholder => "Price Up To" %>
+        </div>
+
+        <div class="field panel-search">
+          <%= f.search_field :area_eq, class:'form-control', :placeholder => "Luas Area" %>
+        </div>
+
+
+        <%= f.submit class: "btn btn-primary" %>
+        <button class="btn"><a href="/admin/properties">Refresh</a></button>
+    <% end %>
+
+  </div>
+</div>

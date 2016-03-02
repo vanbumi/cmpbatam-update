@@ -1,0 +1,24 @@
+<div class="col-lg-9 col-xs-12">
+
+  <p>
+  <% @banner.images.each do |image| %>
+      <%= cl_image_tag(image.path, { size: '125x125', crop: :fit }) %>
+  <% end %>
+  </p>
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @banner.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @banner.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_banner_path(@banner) %> |
+<%= link_to 'Back', banners_path %>
+
+<div

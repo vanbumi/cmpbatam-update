@@ -1,13 +1,20 @@
 Rails.application.routes.draw do
 
+  resources :banners, path: 'admin/banners'
+
   devise_for :users
+  resources :users, path: 'admin/users'
+
   get 'single/index'
+
   get ':slug' => 'single#index'
 
   get 'admin/dashboard' => 'admin#index'
 
   resources :properties, path: 'admin/properties'
+
   get '/properties/name' => 'properties#name'
+
   get '/properties/property_name' => 'properties#property_name'
   
   get '/home' => 'home#index'

@@ -5,47 +5,64 @@
     <style>
       .form-search {
         border: 1px solid #eeeeee;
-        padding: 10px;
+        padding: 20px 10px 10px 10px;
+        background-color: #eeeeee;
       }
+        .btn {
+          margin-top: 8px;
+        }
+
     </style>
 
 
    <!-- Heading -->
-   <h3>Search here</h3>
-
+   <h3><i class="fa fa-search"></i>&nbsp;Find Your Home Here</h3>
 
     <div class="form-search">
       <%= search_form_for @q do |f| %>
         <div class="row">
           <div class="col-lg-3">
-            <%= f.search_field :location_cont, class:'form-control', :placeholder => "Property Location" %>
+            <%= f.label :location_count, 'Property Location' %>
+            <%= f.search_field :location_cont, class:'form-control', :placeholder => "Any" %>
           </div>
           <div class="col-lg-3">
-            <%= f.search_field :status_cont, class:'form-control', :placeholder => "Property Status" %>
+            <%= f.label :status_cont, 'Property Status' %>
+            <%= f.search_field :status_cont, class:'form-control', :placeholder => "Any" %>
           </div>
           <div class="col-lg-3">
-            <%= f.search_field :property_type_cont, class:'form-control', :placeholder => "Property Type" %>
+            <%= f.label :type_count, 'Property Type' %>
+            <%= f.search_field :property_type_cont, class:'form-control', :placeholder => "Any" %>
           </div>
           <div class="col-lg-3">
-            <%= f.search_field :bedroom_eq, class:'form-control', :placeholder => "Min Bedroom" %>
+            <%= f.label :bedroom_count, 'Min Bedroom' %>
+            <%= f.search_field :bedroom_eq, class:'form-control', :placeholder => "Any" %>
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-3">
-            <%= f.search_field :bathroom_eq, class:'form-control', :placeholder => "Min Bathroom" %>
+          <div class="col-lg-2">
+            <%= f.label :bathroom_count, 'Min Bathroom' %>
+            <%= f.search_field :bathroom_eq, class:'form-control', :placeholder => "Any" %>
           </div>
           <div class="col-lg-3">
-            <%= f.search_field :price_gteq, class:'form-control', :placeholder => "Min Price" %>
+            <%= f.label :price_gteq, 'Min Price' %>
+            <%= f.search_field :price_gteq, class:'form-control', :placeholder => "Any" %>
           </div>
           <div class="col-lg-3">
-            <%= f.search_field :price_lteq, class:'form-control', :placeholder => "Max Price" %>
+            <%= f.label :price_lteq, 'Max Price' %>
+            <%= f.search_field :price_lteq, class:'form-control', :placeholder => "Any" %>
           </div>
-          <div class="col-lg-3">
-            <%= f.search_field :area_eq, class:'form-control', :placeholder => "Min Luas Area" %>
+          <div class="col-lg-2">
+            <%= f.label :area_eq, 'Min Area' %>
+            <%= f.search_field :area_eq, class:'form-control', :placeholder => "Any" %>
           </div>
+          <div class="action col-lg-2">
+            <br>
+            <%= f.submit class: "btn btn-primary btn-lg" %>
+          </div>
+
         </div>
 
-      <div class="actions"><%= f.submit %></div>
+
       <% end %>
 
     </div>

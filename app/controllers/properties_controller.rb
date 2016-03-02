@@ -10,7 +10,9 @@ class PropertiesController < ApplicationController
   def index
     @q = Property.ransack(params[:q])
     @properties = @q.result.order("created_at DESC").page(params[:page]).per_page(5)
-    
+
+    @jumlah_prop = Property.count
+
     # @properties = Property.search(params[:search]).order("created_at DESC").page(params[:page]).per_page(5)
     
   end

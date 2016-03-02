@@ -1,44 +1,34 @@
-<div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                </span>General Search</a>
-            </h4>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse in">
-            <div class="panel-body">
-                <table class="table">
-                    <tr>
-                        <td>
-                            <span class="glyphicon glyphicon-dashboard text-primary"></span><a href="/admin/dashboard">Dashboard</a>
+<style>
+  .panel-luar {
+    padding: 10px;
+  }
+  .panel-heading {
+    /*padding-bottom: 20px;*/
+  }
+  .panel-search {
+    margin-top: 20px;
+  }
+</style>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="glyphicon glyphicon-pencil text-primary"></span><a href="/admin/properties">List Property</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="glyphicon glyphicon-flash text-success"></span><a href="http://www.jquery2dotnet.com">News</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="glyphicon glyphicon-file text-info"></span><a href="http://www.jquery2dotnet.com">Newsletters</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="glyphicon glyphicon-comment text-success"></span><a href="http://www.jquery2dotnet.com">Comments</a>
-                            <span class="badge">42</span>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+<div class="panel-group" id="accordion">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <span class="glyphicon glyphicon-dashboard">
+                </span><a href="/admin/dashboard">Dashboard</a>
+      </h4>
+    </div>
+  </div>
+
+    <!--Optional menu search -->
+    <div class="panel panel-default">
+
+      <% if params[:controller] == 'properties' %>
+        <!--search form-->
+        <%= render 'shared/searchform' %>
+      <% end %>
+
     </div>
 
 <!--Only Admin see below !-->
@@ -57,6 +47,11 @@
                         <td>
                           <span class="glyphicon glyphicon-pencil text-primary"></span><a href="/admin/properties">List Property</a>
                         </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="glyphicon glyphicon-picture text-primary"></span><a href="/admin/banners">List Banner</a>
+                      </td>
                     </tr>
                     <tr>
                         <td>
@@ -93,9 +88,14 @@
         <div id="collapseThree" class="panel-collapse collapse">
             <div class="panel-body">
                 <table class="table">
+                  <tr>
+                    <td>
+                      <a href="/admin/users">User List</a>
+                    </td>
+                  </tr>
                     <tr>
                         <td>
-                            <a href="http://www.jquery2dotnet.com">Change Password</a>
+                            <a href="/users/edit">Change Password</a>
                         </td>
                     </tr>
                     <tr>
@@ -129,24 +129,34 @@
         <div id="collapseFour" class="panel-collapse collapse">
             <div class="panel-body">
                 <table class="table">
+                  <tr>
+                    <td>
+                      <span class="glyphicon glyphicon-envelope"></span><a href="#">Inbox</a>
+                    </td>
+                  </tr>
                     <tr>
                         <td>
-                            <span class="glyphicon glyphicon-usd"></span><a href="http://www.jquery2dotnet.com">Sales</a>
+                            <span class="glyphicon glyphicon-usd"></span><a href="#">Sales</a>
+                            <span style="color: #39b3d7"> ( Premium <i class="glyphicon glyphicon-star"></i>)</span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="glyphicon glyphicon-user"></span><a href="http://www.jquery2dotnet.com">Customers</a>
+                            <span class="glyphicon glyphicon-user"></span><a href="#">Customers</a>
+                            <span style="color: #39b3d7"> ( Premium <i class="glyphicon glyphicon-star"></i>)</span>
+
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="glyphicon glyphicon-tasks"></span><a href="http://www.jquery2dotnet.com">Products</a>
+                            <span class="glyphicon glyphicon-tasks"></span><a href="">Products</a>
+                            <span style="color: #39b3d7"> ( Premium <i class="glyphicon glyphicon-star"></i>)</span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="glyphicon glyphicon-shopping-cart"></span><a href="http://www.jquery2dotnet.com">Shopping Cart</a>
+                            <span class="glyphicon glyphicon-shopping-cart"></span><a href="#">Shopping Cart</a>
+                            <span style="color: #39b3d7"> ( Premium <i class="glyphicon glyphicon-star"></i>)</span>
                         </td>
                     </tr>
                 </table>
