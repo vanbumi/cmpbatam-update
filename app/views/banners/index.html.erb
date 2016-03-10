@@ -2,6 +2,12 @@
   <p id="notice"><%= notice %></p>
 
   <h1>Listing Banners</h1>
+  <br>
+  <i class="fa fa-plus-circle"></i>&nbsp;<%= link_to "Add New Banner", new_banner_path %> <br>
+  <div class="alert alert-danger" role="alert">
+    Menambahkan Banner hanya bila Banner masih kosong, untuk mengganti Banner cukup dengan EDIT,
+    klik tombol EDIT untuk mengganti Banner lain.
+  </div>
 
   <table class="table">
     <thead>
@@ -13,8 +19,6 @@
     </thead>
 
     <tbody>
-
-
     <% @banners.each do |banner| %>
     <tr>
         <td><%= banner.name %></td>
