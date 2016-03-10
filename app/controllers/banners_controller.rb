@@ -8,9 +8,14 @@ class BannersController < ApplicationController
   # GET /banners
   # GET /banners.json
   def index
-    @banners       = Banner.all
+    @banners        = Banner.all
 
-    @jumlah_banner = Banner.count
+    @jumlah_banner  = Banner.count
+
+    # @properties     = Property.order("created_at DESC")
+
+    @q = Property.ransack(params[:q])
+    @properties = @q.result.order("created_at DESC").page(params[:page]).per_page(8)
   end
 
   # GET /banners/1
@@ -75,6 +80,6 @@ class BannersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def banner_params
-      params.require(:banner).permit(:name, :description, :images)
+      params.require(:banner).permit(:name, :description, :images, :banner1, :banner2, :banner3, :banner4, :banner5)
     end
 end

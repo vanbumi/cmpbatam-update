@@ -1,5 +1,12 @@
 <%= render 'shared/header' %>
 
+<style>
+  .garis-bawah {
+    border-top: solid #f1f1f1 1px;
+
+  }
+</style>
+
 <div class="container">  
   <div class="col-md-8 col-md-offset-2 ">  
     
@@ -9,48 +16,67 @@
           <%= cl_image_tag(image.path, { size: '', crop: :fit }) %>
         <% end %>         
     </p>
-        
-    <p>
-      <strong>Name:</strong>
+
+    <div class="row">
+      <p>
+        <strong>Name:</strong>
       <h3><%= property.name %></h3>
-    </p>
-    
-    <p>
-      <strong>Location:</strong>
-      <h4><%= property.location %></h4>
-    </p>
+      </p>
+    </div>
 
-    <p>
-      <strong>Status:</strong>
-      <h4><%= property.status %></h4> 
-    </p>
+    <div class="row">
+      <div class="col-lg-6">
 
-    <p>
-      <strong>Property type:</strong>
-      <h4><%= property.property_type %></h4>  
-    </p>
+        <p class="garis-bawah">
+          <strong>Location:</strong>
+          <h4><%= property.location %></h4>
+        </p>
 
-    <p>
-      <strong>Bedroom:</strong>
-      <h4><%= property.bedroom %></h4>  
-    </p>
+        <p class="garis-bawah">
+          <strong>Status:</strong>
+          <h4><%= property.status %></h4>
+        </p>
 
-    <p>
-      <strong>Bathroom:</strong>
-      <h4><%= property.bathroom %></h4>
-    </p>
+        <p class="garis-bawah">
+          <strong>Property type:</strong>
+          <h4><%= property.property_type %></h4>
+        </p>
 
-    <p>
-      <strong>Price:</strong>
-      <h4><%= number_to_currency(property.price, precision: 0, unit: "Rp. ", separator: "", delimiter: ".") %></h4>  
-    </p>
+        <p class="garis-bawah">
+          <strong>Bedroom:</strong>
+        <h4><%= property.bedroom %></h4>
+        </p>
+      </div>
 
-    <p>
-      <strong>Area:</strong>
-      <h4><%= property.area %></h4>
-    </p>
+      <div class="col-lg-6">
 
-    <% end %>
+
+        <p class="garis-bawah">
+          <strong>Bathroom:</strong>
+          <h4><%= property.bathroom %></h4>
+        </p>
+
+        <p class="garis-bawah">
+          <strong>Price:</strong>
+          <h4><%= number_to_currency(property.price, precision: 0, unit: "Rp. ", separator: "", delimiter: ".") %></h4>
+        </p>
+
+        <p class="garis-bawah">
+          <strong>Area:</strong>
+          <h4><%= property.area %></h4>
+        </p>
+
+        <p class="garis-bawah">
+          <strong>Description:</strong>
+        <h4></h4>
+        </p>
+
+        <% end %>
+      </div>
+
+    </div>
 
   </div>  
 </div>
+
+<br><br>

@@ -32,11 +32,14 @@
                 <%= cl_image_tag(image.path, { size: '348x230', crop: :fit }) %>
                 <div class="caption text-left">
                   <h3><%= property.name %></h3>
+                  <p class="pull-right"><span class="label label-primary"><strong><%= number_to_currency(property.price, precision:0, unit:"Rp.", delimiter: ".") %></strong></span></p>
                   <ul class="list-unstyled">
-                    <li>Type: <%= property.property_type %></li>
-                    <li>Luas: <%= property.area %></li>
+                    <li><i class="fa fa-university"></i>&nbsp;<%= property.property_type %></li>
+                    <li><i class="fa fa-expand"></i>&nbsp;&nbsp;<%= property.area %></li>
+                    <li><i class="fa fa-bed"></i>&nbsp;<%= property.bedroom %>&nbsp;Bedroom</li>
+                    <li><i class="fa fa-tint"></i>&nbsp;&nbsp;&nbsp;<%= property.bathroom %>&nbsp;Bathroom</li>
                   </ul>
-                  <p><a href="/<%= property.slug %>" class="btn btn-primary" role="button">lihat detail</a></p>
+                  <p><a href="/<%= property.slug %>" class="btn btn-primary" role="button" style="color:#FFFFFF;">Lihat Detail</a></p>
                 </div>
               </div>
             </div>
@@ -44,5 +47,6 @@
         <% end %>
         
       </div>
+      <%= will_paginate @properties, :style => 'color:blue' %>
     </div>
 </section>

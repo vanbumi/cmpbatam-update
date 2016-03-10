@@ -438,7 +438,7 @@ color:#F89F9F;
 	/*background: url("../images/banner-bg.jpg") no-repeat;*/
 	background-size: cover;
 	position: relative;
-	border-bottom: 2px #4955a4 solid;
+	/*border-bottom: 2px #4955a4 solid;*/
 }
 .banner-container:before {
 position: absolute;

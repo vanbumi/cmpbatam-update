@@ -7,26 +7,48 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Description</th>
-        <th colspan="3"></th>
+        <th>Image Url</th>
+        <th colspan="3">Actions</th>
       </tr>
     </thead>
 
     <tbody>
-      <% @banners.each do |banner| %>
-        <tr>
-          <td><%= banner.name %></td>
-          <td><%= banner.description %></td>
-          <td><%= link_to 'Show', banner %></td>
-          <td><%= link_to 'Edit', edit_banner_path(banner) %></td>
-          <td><%= link_to 'Destroy', banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
+
+
+    <% @banners.each do |banner| %>
+    <tr>
+        <td><%= banner.name %></td>
+        <td>
+          <dl>
+            <dt>Banner1</dt>
+            <dd><%= banner.banner1 %></dd>
+          </dl>
+          <dl>
+            <dt>Banner2</dt>
+            <dd><%= banner.banner2 %></dd>
+          </dl>
+          <dl>
+            <dt>Banner3</dt>
+            <dd><%= banner.banner3 %></dd>
+          </dl>
+          <dl>
+            <dt>Banner4</dt>
+            <dd><%= banner.banner4 %></dd>
+          </dl>
+          <dl>
+            <dt>Banner5</dt>
+            <dd><%= banner.banner5 %></dd>
+          </dl>
+
+        </td>
+        <td><i class="glyphicon glyphicon-eye-open"></i><%= link_to 'Show', banner %></td>
+        <td><i class="glyphicon glyphicon-pencil"></i><%= link_to 'Edit', edit_banner_path(banner) %></td>
+        <td><%= link_to '', banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
     </tbody>
   </table>
 
   <br>
-
-  <%= link_to 'New Banner', new_banner_path %>
 
 </div>

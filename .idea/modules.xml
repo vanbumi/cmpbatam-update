@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cmpbatam.iml" filepath="$PROJECT_DIR$/.idea/cmpbatam.iml" />
+      <module fileurl="file://$USER_HOME$/sites_react/indorails-react4-everyone/.idea/indorails-react4-everyone.iml" filepath="$USER_HOME$/sites_react/indorails-react4-everyone/.idea/indorails-react4-everyone.iml" />
     </modules>
   </component>
 </project>
