@@ -47,17 +47,13 @@
     <%= f.label :area %><br>
     <%= f.text_field :area, class:"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url, class:"form-control" %>
-  </div>
 
   <div class="field">
     <%= f.label :upload_image %><br>
     <%= f.attachinary_file_field :images %>
   </div>
 
-  <div id="image_url"></div>
+  <!--<div id="image_url"></div>-->
   <br>
   <div class="actions">
     <%= f.submit class:"btn btn-lg btn-primary" %>

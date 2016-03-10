@@ -4,9 +4,9 @@
   <h1>Listing Banners</h1>
   <br>
   <i class="fa fa-plus-circle"></i>&nbsp;<%= link_to "Add New Banner", new_banner_path %> <br>
-  <div class="alert alert-danger" role="alert">
-    Menambahkan Banner hanya bila Banner masih kosong, untuk mengganti Banner cukup dengan EDIT,
-    klik tombol EDIT untuk mengganti Banner lain.
+  <div class="alert alert-info" role="alert">
+    <i>Menambahkan Banner hanya bila Banner masih kosong, untuk mengganti Banner cukup dengan EDIT,
+    klik tombol EDIT untuk mengganti Banner lain.</i>
   </div>
 
   <table class="table">
@@ -47,7 +47,7 @@
         </td>
         <td><i class="glyphicon glyphicon-eye-open"></i><%= link_to 'Show', banner %></td>
         <td><i class="glyphicon glyphicon-pencil"></i><%= link_to 'Edit', edit_banner_path(banner) %></td>
-        <td><%= link_to '', banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><i class="glyphicon glyphicon-remove"></i><%= link_to 'Remove', banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
     </tbody>

@@ -18,6 +18,10 @@ class HomeController < ApplicationController
 
     @banners    = Banner.all
 
+    # @contacts = Contact.all
+    @contact = Contact.new
+
+
   end
 
 end

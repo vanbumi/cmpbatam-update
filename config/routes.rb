@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :contacts
   resources :banners, path: 'admin/banners'
 
   devise_for :users
