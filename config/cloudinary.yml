@@ -1,19 +1,19 @@
 ---
 development:
-  cloud_name: medioxtra
-  api_key: '393825632941392'
-  api_secret: fM7sPtVCzPBViFO4DmSkq3Hh8ew
+  cloud_name: cmp-batam
+  api_key: '458949694437461'
+  api_secret: h1qTkYd4DqCD-iCk6mogG1J4A6Y
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: medioxtra
-  api_key: '393825632941392'
-  api_secret: fM7sPtVCzPBViFO4DmSkq3Hh8ew
+  cloud_name: cmp-batam
+  api_key: '458949694437461'
+  api_secret: h1qTkYd4DqCD-iCk6mogG1J4A6Y
   enhance_image_tag: true
   static_image_support: true
 test:
-  cloud_name: medioxtra
-  api_key: '393825632941392'
-  api_secret: fM7sPtVCzPBViFO4DmSkq3Hh8ew
+  cloud_name: cmp-batam
+  api_key: '458949694437461'
+  api_secret: h1qTkYd4DqCD-iCk6mogG1J4A6Y
   enhance_image_tag: true
   static_image_support: false

@@ -59,16 +59,42 @@
       <h4><%= @property.area %></h4>
     </p>
 
-    <p>
-      <strong>Image Url:</strong>
-    <h4><%= @property.image_url %></h4>
-    </p>
+    <h3>Foto Tambahan </h3>
 
-    
+    <div class="row">
+      <div class="col-lg-6">
+        <%= image_tag(@property.image_url, width: "400")  %>
+      </div>
+      <div class="col-lg-6">
+        <%= image_tag(@property.image_url, width: "400")  %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <%= image_tag(@property.image_url, width: "400")  %>
+      </div>
+      <div class="col-lg-6">
+        <%= image_tag(@property.image_url, width: "400")  %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <%= image_tag(@property.image_url, width: "400")  %>
+      </div>
+      <div class="col-lg-6">
+        <%= image_tag(@property.image_url, width: "400")  %>
+      </div>
+    </div>
+
     <br>
-    <%= link_to 'Edit', edit_property_path(@property) %> |
-    <%= link_to 'Back', properties_path %>
-    <br><br>
+
+    <% if user_signed_in? %>
+      <i class="fa fa-edit"></i>&nbsp;<%= link_to 'Edit', edit_property_path(@property) %> |
+    <% end %>
+
+    <i class="fa fa-undo"></i>&nbsp;<%= link_to 'Back', properties_path %>
 
   </div>  
 </div>
+
+<br><br>
