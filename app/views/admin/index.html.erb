@@ -2,39 +2,159 @@
 <div class="col-sm-9 col-lg-9" style="margin-top: 20px">
     <div class="col-lg-12">
       <div class="row">
-        <div class="col-lg-6 col-xs-12">
-          <div class="panel panel-info ">
+        <div class="col-lg-12 col-xs-12">
+          <div class="panel panel-primary ">
             <div class="panel-heading">
-              <h3 class="panel-title"><button class="btn btn-info" type="button">
-                <span class="badge"><%= @jumlah_prop %></span>
-              </button></h3>
-            </div>
-            <div class="panel-body">
-              <h2><span style="color: #39B3D7" class="glyphicon glyphicon-home" aria-hidden="true">
-                    <span style="color:#4a4a4a">Property List</span>
+              <h2><span style="color: #FFFFFF" class="glyphicon glyphicon-home" aria-hidden="true">
+                    <span style="color: #FFFFFF">Property List</span>
+                  </span>
+                  <span class="pull-right">
+                    <button class="btn btn-warning" type="button">
+                      <span class="badge"><%= @jumlah_prop %></span>
+                    </button>
+                    <span style="color: #FFFFFF">&nbsp;List Active</span>
+                    <%= @jumlah_forsale %>
                   </span>
               </h2>
+            </div>
 
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-xs-12">
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <h3 class="panel-title"><button class="btn btn-info" type="button">
-                <span class="badge"><%= @jumlah_banner %></span>
-              </button></h3>
-            </div>
+            <style>
+              .datax {
+                border-bottom:1px #f4f4f4 solid;
+              }
+            </style>
             <div class="panel-body">
-              <h2><span class="glyphicon glyphicon-picture" aria-hidden="true">&nbsp;Banner Images</span></h2>
+              <div class="row">
+                <!--for sale-->
+                <div class="col-lg-3">
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-primary" type="button">
+                      <span class="badge"><%= @rumah_forsale %></span>
+                    </button>
+                    &nbsp;Home For Sale
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-primary" type="button">
+                      <span class="badge"><%= @ruko_forsale %></span>
+                    </button>
+                    &nbsp;Ruko For Sale
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-primary" type="button">
+                      <span class="badge"><%= @tanah_forsale %></span>
+                    </button>
+                    &nbsp;Tanah For Sale
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-primary" type="button">
+                      <span class="badge"><%= @townh_forsale %></span>
+                    </button>
+                    &nbsp;Town H For Sale
+                  </h3>
+                </div>
+                <!--for rent-->
+                <div class="col-lg-3">
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-info" type="button">
+                      <span class="badge"><%= @rumah_forrent %></span>
+                    </button>
+                    &nbsp;Home For Rent
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-info" type="button">
+                      <span class="badge"><%= @ruko_forrent %></span>
+                    </button>
+                    &nbsp;Ruko For Rent
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-info" type="button">
+                      <span class="badge"><%= @tanah_forrent %></span>
+                    </button>
+                    &nbsp;Tanah For Rent
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-info" type="button">
+                      <span class="badge"><%= @townh_forrent %></span>
+                    </button>
+                    &nbsp;Town H For Rent
+                  </h3>
+                </div>
+                <!--tersewa-->
+                <div class="col-lg-3">
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-success" type="button">
+                      <span class="badge"><%= @rumah_forrent %></span>
+                    </button>
+                    &nbsp;Home Leased!
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-success" type="button">
+                      <span class="badge"><%= @ruko_forrent %></span>
+                    </button>
+                    &nbsp;Ruko Leased!
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-success" type="button">
+                      <span class="badge"><%= @tanah_forrent %></span>
+                    </button>
+                    &nbsp;Tanah Leased!
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-success" type="button">
+                      <span class="badge"><%= @townh_forrent %></span>
+                    </button>
+                    &nbsp;Town H Leased!
+                  </h3>
+                </div>
+                <!--sold-->
+                <div class="col-lg-3">
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-danger" type="button">
+                      <span class="badge"><%= @rumah_forrent %></span>
+                    </button>
+                    &nbsp;Home Sold!
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-danger" type="button">
+                      <span class="badge"><%= @ruko_forrent %></span>
+                    </button>
+                    &nbsp;Ruko Sold!
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-danger" type="button">
+                      <span class="badge"><%= @tanah_forrent %></span>
+                    </button>
+                    &nbsp;Tanah Sold!
+                  </h3>
+                  <h3 class="panel-title datax">
+                    <button class="btn btn-danger" type="button">
+                      <span class="badge"><%= @townh_forrent %></span>
+                    </button>
+                    &nbsp;Town H Sold!
+                  </h3>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
+        <!--<div class="col-lg-6 col-xs-12">-->
+          <!--<div class="panel panel-info">-->
+            <!--<div class="panel-heading">-->
+              <!--<h3 class="panel-title"><button class="btn btn-info" type="button">-->
+                <!--<span class="badge"><%= @jumlah_banner %></span>-->
+              <!--</button></h3>-->
+            <!--</div>-->
+            <!--<div class="panel-body">-->
+              <!--<h2><span class="glyphicon glyphicon-picture" aria-hidden="true">&nbsp;Banner Images</span></h2>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
       </div>
 
       <div class="row">
         <div class="col-lg-6 col-xs-12">
-          <div class="panel panel-default">
+          <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title"><button class="btn btn-info" type="button">
                 <span class="badge"><%= @jumlah_user %></span>
@@ -46,10 +166,10 @@
           </div>
         </div>
         <div class="col-lg-6 col-xs-12">
-          <div class="panel panel-default">
+          <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title"><button class="btn btn-info" type="button">
-                <span class="badge">4</span>
+                <span class="badge"><%= @jumlah_contact %></span>
               </button></h3>
             </div>
             <div class="panel-body">
@@ -61,7 +181,7 @@
 
       <div class="row">
         <div class="col-lg-6 col-xs-12">
-          <div class="panel panel-warning">
+          <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title"><button class="btn btn-info" type="button">
                 <span class="badge"><%= @jumlah_user %></span>
@@ -74,7 +194,7 @@
           </div>
         </div>
         <div class="col-lg-6 col-xs-12">
-          <div class="panel panel-warning">
+          <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title"><button class="btn btn-info" type="button">
                 <span class="badge">4</span>

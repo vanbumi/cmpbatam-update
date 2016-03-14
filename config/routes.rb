@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :contacts
   resources :banners, path: 'admin/banners'
 
-  devise_for :users
+  # devise_for :users
+  devise_for :users, :path => '', :path_names => {:sign_in => 'cmp-login', :sign_out => 'cmp-logout'}
+
   resources :users, path: 'admin/users'
 
   get 'single/index'
