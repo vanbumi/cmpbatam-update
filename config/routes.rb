@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   resources :contacts
   resources :banners, path: 'admin/banners'
 
-  # devise_for :users
-  devise_for :users, :path => '', :path_names => {:sign_in => 'cmp-login', :sign_out => 'cmp-logout', :sign_up => 'cmp-register'}
-
+  devise_for :users
   resources :users, path: 'admin/users'
 
   get 'single/index'
@@ -28,6 +26,9 @@ Rails.application.routes.draw do
   get '/listing' => 'home#listing'
 
   get 'landing/index' => 'home#landing'
+
+  # CMP User Documentation
+  get 'cmp/documentation' => 'home#dokumentasi'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -2,6 +2,8 @@ class AdminController < ApplicationController
 
   layout 'admin_layout'
 
+  before_action :authenticate_user!
+
   def index
     @jumlah_prop    = Property.count
     @jumlah_banner  = Banner.count

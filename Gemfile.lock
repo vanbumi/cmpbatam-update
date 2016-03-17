@@ -87,6 +87,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    markdown-rails (0.2.1)
+      rails
+      rdiscount (>= 1.6.8, < 2.0)
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
@@ -132,6 +135,7 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.2)
+    rdiscount (1.6.8)
     rdoc (4.2.1)
       json (~> 1.4)
     ref (2.0.0)
@@ -195,6 +199,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  markdown-rails (~> 0.2.1)
   pg
   rails (= 4.2.4)
   ransack (~> 1.7)

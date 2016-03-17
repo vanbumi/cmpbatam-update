@@ -24,6 +24,8 @@ gem 'ransack', '~> 1.7'
 
 gem 'devise'
 
+gem 'markdown-rails', '~> 0.2.1'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
