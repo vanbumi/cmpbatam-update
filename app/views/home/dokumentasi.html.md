@@ -28,7 +28,22 @@
 
 ![admin](http://res.cloudinary.com/cmp-batam/image/upload/v1458210874/adminpage_ibdgiw.png)
 
+### Cara membuat Listing
 
+    1. Klik Main Menu
+    2. Klik List Property
+    3. Klik Add Property
+    4. Masukan semua detil property termasuk upload foto property tsb, harap di ingat ukuran gambar usahakan semua satu ukuran misalnya: 1200 x 800 pixel.
+    5. Upload foto penunjang (tambahan) via cloudinari.com (Cara Upload foto di cloudinary lihat petunjuk berikutnya dibawah).
+    
+** [Cloudinari.Com](http://cloudinary.com)    
 
+### Admin Top Menu 
+
+![top menu](http://res.cloudinary.com/cmp-batam/image/upload/v1458212415/menu-admin_inc8rs.png)
+
+    
+    
+    
    
    
