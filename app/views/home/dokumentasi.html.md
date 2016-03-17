@@ -16,4 +16,19 @@
     
     http://cmpbatam.com/cmp-register
     
-![Register](http://res.cloudinary.com/cmp-batam/image/upload/c_scale,w_800/v1458207638/register_h3ck46.png)    
+![Register](http://res.cloudinary.com/cmp-batam/image/upload/c_scale,w_800/v1458207638/register_h3ck46.png) 
+   
+#### Step Register
+ 
+    1. Masukkan email, 
+    2. Msukkan password dan 
+    3. Ulangin password untuk konfirmasi.
+
+### Halaman Administrator
+
+![admin](http://res.cloudinary.com/cmp-batam/image/upload/v1458210874/adminpage_ibdgiw.png)
+
+
+
+   
+   
