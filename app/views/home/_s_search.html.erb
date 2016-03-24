@@ -5,12 +5,15 @@
     <style>
       .form-search {
         border: 1px solid #eeeeee;
-        padding: 20px 10px 10px 10px;
+        padding: 20px 10px 20px 10px;
         background-color: #eeeeee;
       }
-        .btn {
-          margin-top: 8px;
-        }
+      .btn {
+        margin-top: 8px;
+      }
+      .baris {
+        margin-top: 10px;
+      }
 
     </style>
 
@@ -20,14 +23,43 @@
 
     <div class="form-search">
       <%= search_form_for @q do |f| %>
-        <div class="row">
+        <div class="row baris">
           <div class="col-lg-3">
-            <%= f.label :location_count, 'Property Location' %>
-            <%= f.search_field :location_cont, class:'form-control', :placeholder => "Any" %>
+            <%= f.label :location_cont, 'Property Location' %>
+            <%= f.select(:location_cont, options_for_select([
+                                                                ['Baloi','Baloi'],
+                                                                ['Barelang','Barelang'],
+                                                                ['Batam Center','Batam Center'],
+                                                                ['Botania','Botania'],
+                                                                ['Batam Kota','Batam Kota'],
+                                                                ['Batu Aji','Batu Aji'],
+                                                                ['Batu Ampar','Batu Ampar'],
+                                                                ['Bengkong','Bengkong'],
+                                                                ['Jodoh','Jodoh'],
+                                                                ['Muka Kuning','Muka Kuning'],
+                                                                ['Nagoya','Nagoya'],
+                                                                ['Sei Panas','Sei Panas'],
+                                                                ['Sekupang','Sekupang'],
+                                                                ['Suka Jadi','Suka Jadi'],
+                                                                ['Tg Piayu','Tg Piayu'],
+                                                                ['Tiban','Tiban']
+                                                            ]),
+                         {:prompt => "Any"},
+                         {class: "form-control"}
+                ) %>
           </div>
           <div class="col-lg-3">
             <%= f.label :status_cont, 'Property Status' %>
-            <%= f.search_field :status_cont, class:'form-control', :placeholder => "Any" %>
+            <% f.search_field :status_cont, class:'form-control', :placeholder => "Any" %>
+            <%= f.select(:status_cont, options_for_select([
+                    ['For Rent', 'For Rent'],
+                    ['For Sale', 'For Sale'],
+                    ['Sold !', 'Sold !' ],
+                    ['Leased !', 'Leased !']
+                  ]),
+              {:prompt => "Any"},
+              {:class => "form-control"}
+            ) %>
           </div>
           <div class="col-lg-3">
             <%= f.label :type_count, 'Property Type' %>
@@ -38,7 +70,7 @@
             <%= f.search_field :bedroom_eq, class:'form-control', :placeholder => "Any" %>
           </div>
         </div>
-        <div class="row">
+        <div class="row baris">
           <div class="col-lg-2">
             <%= f.label :bathroom_count, 'Min Bathroom' %>
             <%= f.search_field :bathroom_eq, class:'form-control', :placeholder => "Any" %>

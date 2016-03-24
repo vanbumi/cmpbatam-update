@@ -15,6 +15,10 @@ class HomeController < ApplicationController
 
   end
 
+  def lat_react
+    
+  end
+
   def landing
   	@properties = Property.order("created_at DESC").page(params[:page]).per_page(9)
     # @properties = Property.search(params[:search]).order("created_at DESC").page(params[:page]).per_page(5)

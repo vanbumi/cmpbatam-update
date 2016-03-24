@@ -32,6 +32,8 @@ Rails.application.routes.draw do
   # CMP User Documentation
   get 'cmp/documentation' => 'home#dokumentasi'
 
+  get 'react/latihan' => 'home#lat_react'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

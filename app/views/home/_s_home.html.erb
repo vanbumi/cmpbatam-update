@@ -30,7 +30,25 @@
     </div>
   </div>
   
-  <div class="container hero-text2">
-  <h1>Welcome to Citra Megah Property - Batam</h1>
-  </div>
+  <!--<div class="container hero-text2">-->
+    <!--<h1>Welcome to Citra Megah Property - Batam</h1>-->
+  <!--</div>-->
+
+  <!--ReactJS-->
+  <div id="welkom" class="container hero-text2"></div>
+  <script type="text/babel">
+    var Welcome = React.createClass({
+      render: function() {
+        return(
+          <h1>Welcome to {this.props.name}</h1>
+        )
+      }
+    });
+    ReactDOM.render(
+        <Welcome name="Citra Megah Property - Batam" />,
+        document.getElementById('welkom')
+    );
+
+  </script>
+
 </section>

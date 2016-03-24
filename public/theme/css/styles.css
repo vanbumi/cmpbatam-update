@@ -138,19 +138,19 @@ padding: 8px 12px;
 	width: 75%;
 }
 .form-control {
-	border: none;
-	padding: 22px 4px;
-	outline: none;
-	color: #5A5A5A;
-	margin: 0;
-	width: 210px;
-	max-width: 100%;
-	display: block;
-	margin-bottom: 20px;
-	background: #F5F2ED;
-	font-size: inherit;
-	border-radius: 0px !important;
-	width: 99%;
+	/*border: none;*/
+	/*padding: 22px 4px;*/
+	/*outline: none;*/
+	/*color: #5A5A5A;*/
+	/*margin: 0;*/
+	/*width: 210px;*/
+	/*max-width: 100%;*/
+	/*display: block;*/
+	/*margin-bottom: 20px;*/
+	/*background: #F5F2ED;*/
+	/*font-size: inherit;*/
+	/*border-radius: 0px !important;*/
+	/*width: 99%;*/
 }
 .button-outline {
 	-webkit-font-smoothing: antialiased;
