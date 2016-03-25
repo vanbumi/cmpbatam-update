@@ -6,7 +6,29 @@
 
     http://cmpbatam.com/cmp-login
 
-![loign](http://res.cloudinary.com/cmp-batam/image/upload/v1457972804/cmp-login_xso4zo.png)
+![login](http://res.cloudinary.com/cmp-batam/image/upload/v1457972804/cmp-login_xso4zo.png)
+
+## **1a. Cara Login 2 - Dari Halaman Beranda**
+
+    Klik Menu Login
+
+![loginMenu](http://res.cloudinary.com/cmp-batam/image/upload/v1458896858/top-menu_zwlgt3.png)
+
+    Kemudian isi form login
+       
+    Bila login berhasil di menu akan muncul icon person, lihat gambar bawah:
+           
+![icon-person](http://res.cloudinary.com/cmp-batam/image/upload/v1458897148/user-appear_xs8csx.png)           
+
+    Bila di klik person akan muncul menu ke Dashboard & Logout
+     
+![menu-user](http://res.cloudinary.com/cmp-batam/image/upload/v1458897423/menu-user_dlv4gq.png)     
+
+    Klik Dashboard maka akan menuju halaman Dashboard yaitu halaman Admin
+
+![Dashboard](http://res.cloudinary.com/cmp-batam/image/upload/c_scale,w_800/v1458898190/dashboard_bafgie.png)
+
+---
 
 ## **2. Cara Register New User**
 
