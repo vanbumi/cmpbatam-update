@@ -19,7 +19,7 @@
 
 
    <!-- Heading -->
-   <h3><i class="fa fa-search"></i>&nbsp;Find Your Home Here</h3>
+   <h3><i class="fa fa-search"></i>&nbsp;Find Your Home</h3>
 
     <div class="form-search">
       <%= search_form_for @q do |f| %>
@@ -48,6 +48,7 @@
                          {class: "form-control"}
                 ) %>
           </div>
+
           <div class="col-lg-3">
             <%= f.label :status_cont, 'Property Status' %>
             <% f.search_field :status_cont, class:'form-control', :placeholder => "Any" %>
@@ -61,32 +62,89 @@
               {:class => "form-control"}
             ) %>
           </div>
+
           <div class="col-lg-3">
-            <%= f.label :type_count, 'Property Type' %>
-            <%= f.search_field :property_type_cont, class:'form-control', :placeholder => "Any" %>
+            <%= f.label :property_type_cont, 'Property Type' %>
+            <%= f.select(:property_type_cont, options_for_select([
+                          ['Rumah', 'Rumah'],
+                          ['Apartemen', 'Apartemen'],
+                          ['Kantor', 'Kantor' ],
+                          ['Ruko', 'Ruko'],
+                          ['Tanah', 'Tanah'],
+                          ['Gudang', 'Gudang']
+               ]),
+               {:prompt => "Any"},
+               {:class => "form-control"}
+            ) %>
+
           </div>
+
           <div class="col-lg-3">
-            <%= f.label :bedroom_count, 'Min Bedroom' %>
-            <%= f.search_field :bedroom_eq, class:'form-control', :placeholder => "Any" %>
+            <%= f.label :bedroom_cont, 'Min Bedroom' %>
+            <%= f.select(:bedroom_cont, options_for_select([
+                     ['1', '1'],
+                     ['2', '2'],
+                     ['3', '3' ],
+                     ['4', '4'],
+                     ['5', '5'],
+                     ['6', '6']
+                 ]),
+               {:prompt => "Any"},
+               {:class => "form-control"}
+                ) %>
           </div>
         </div>
+
         <div class="row baris">
           <div class="col-lg-2">
-            <%= f.label :bathroom_count, 'Min Bathroom' %>
-            <%= f.search_field :bathroom_eq, class:'form-control', :placeholder => "Any" %>
+            <%= f.label :bathroom_cont, 'Min Bathroom' %>
+            <%= f.select(:bathroom_cont, options_for_select([
+                     ['1', '1'],
+                     ['2', '2'],
+                     ['3', '3' ],
+                     ['4', '4'],
+                     ['5', '5'],
+                     ['6', '6']
+                 ]),
+               {:prompt => "Any"},
+               {:class => "form-control"}
+                ) %>
           </div>
           <div class="col-lg-3">
             <%= f.label :price_gteq, 'Min Price' %>
-            <%= f.search_field :price_gteq, class:'form-control', :placeholder => "Any" %>
+            <%= f.select(:price_gteq, options_for_select([
+                    ['Rp.100 Juta', '100000000'],
+                    ['Rp.200 Juta', '200000000'],
+                    ['3', '3' ],
+                    ['4', '4'],
+                    ['5', '5'],
+                    ['6', '6']
+                ]),
+               {:prompt => "Any"},
+               {:class => "form-control"}
+                ) %>
           </div>
+
           <div class="col-lg-3">
             <%= f.label :price_lteq, 'Max Price' %>
-            <%= f.search_field :price_lteq, class:'form-control', :placeholder => "Any" %>
+            <%= f.select(:price_lteq, options_for_select([
+                     ['Rp.100 Juta', '100000000'],
+                     ['Rp.200 Juta', '200000000'],
+                     ['3', '3' ],
+                     ['4', '4'],
+                     ['5', '5'],
+                     ['6', '6']
+                 ]),
+                 {:prompt => "Any"},
+                 {:class => "form-control"}
+                ) %>
           </div>
+
           <div class="col-lg-2">
             <%= f.label :area_eq, 'Min Area' %>
             <%= f.search_field :area_eq, class:'form-control', :placeholder => "Any" %>
           </div>
+
           <div class="action col-lg-2">
             <br>
             <%= f.submit class: "btn btn-primary btn-lg" %>
