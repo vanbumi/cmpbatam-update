@@ -1,7 +1,18 @@
 <style>
-  p {
-    background-color: #f4f4f4;
+    p {
+    /*background-color: #f4f4f4;*/
   }
+    .spasi {
+    margin-bottom: 20px;
+  }
+    .box {
+      border: 1px #fff solid;
+      padding: 10px 10px;
+      background-color: #f1f1f1;
+    }
+    .teks {
+      font-size: 28px;
+    }
 </style>
 
 <div class="container">  
@@ -13,76 +24,80 @@
         <%= cl_image_tag(image.path, { size: '', crop: :fit }) %>
       <% end %>  
     </p>
-    
-    <p>
-      <strong>Name:</strong>
-      <h3><%= @property.name %></h3>
-    </p>
 
-    <p>
-      <strong>Alias:</strong>
-      <%= @property.slug %>
-    </p>
+    <div class="box">
+        <h2><%= @property.name %></h2>
+      <p>
+        <strong>Alias:</strong>
+        <%= @property.slug %>
+      </p>
+    </div>
 
-    <p>
+    <div class="box">
       <strong>Location:</strong>
       <h4><%= @property.location %></h4>
-    </p>
+    </div>
 
-    <p>
+    <div class="box">
       <strong>Status:</strong>
-      <h4><%= @property.status %></h4> 
-    </p>
+      <h4><%= @property.status %></h4>
+    </div>
 
-    <p>
+    <div class="box">
       <strong>Property type:</strong>
-      <h4><%= @property.property_type %></h4>  
-    </p>
+      <h4><%= @property.property_type %></h4>
+    </div>
 
-    <p>
+    <div class="box">
       <strong>Bedroom:</strong>
-      <h4><%= @property.bedroom %></h4>  
-    </p>
+      <h4><%= @property.bedroom %></h4>
+    </div>
 
-    <p>
+    <div class="box">
       <strong>Bathroom:</strong>
       <h4><%= @property.bathroom %></h4>
-    </p>
+    </div>
 
-    <p>
+    <div class="box">
       <strong>Price:</strong>
-      <h4><%= number_to_currency(@property.price, precision: 0, unit: "Rp.", separator: "", delimiter: ".") %></h4>  
-    </p>
+      <h4><%= number_to_currency(@property.price, precision: 0, unit: "Rp.", separator: "", delimiter: ".") %></h4>
+    </div>
 
-    <p>
+    <div class="box">
       <strong>Area:</strong>
       <h4><%= @property.area %></h4>
-    </p>
+    </div>
 
     <h3>Foto Tambahan </h3>
 
-    <div class="row">
+    <div class="row spasi">
       <div class="col-lg-6">
         <%= image_tag(@property.image_url, width: "400")  %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= @property.image_description %></div>
       </div>
       <div class="col-lg-6">
-        <%= image_tag(@property.image_url, width: "400")  %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <%= image_tag(@property.image_url, width: "400")  %>
-      </div>
-      <div class="col-lg-6">
-        <%= image_tag(@property.image_url, width: "400")  %>
+        <%= image_tag(@property.image_url2, width: "400")  %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= @property.image_description2 %></div>
       </div>
     </div>
-    <div class="row">
+    <div class="row spasi">
       <div class="col-lg-6">
-        <%= image_tag(@property.image_url, width: "400")  %>
+        <%= image_tag(@property.image_url3, width: "400")  %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= @property.image_description3 %></div>
       </div>
       <div class="col-lg-6">
-        <%= image_tag(@property.image_url, width: "400")  %>
+        <%= image_tag(@property.image_url4, width: "400")  %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= @property.image_description4 %></div>
+      </div>
+    </div>
+    <div class="row spasi">
+      <div class="col-lg-6">
+        <%= image_tag(@property.image_url5, width: "400")  %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= @property.image_description5 %></div>
+      </div>
+      <div class="col-lg-6">
+        <%= image_tag(@property.image_url6, width: "400")  %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= @property.image_description6 %></div>
       </div>
     </div>
 

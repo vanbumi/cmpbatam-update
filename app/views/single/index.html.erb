@@ -1,25 +1,28 @@
 <%= render 'shared/header' %>
 
 <style>
-  .garis-bawah {
+    .garis-bawah {
     border-top: solid #f1f1f1 1px;
-
   }
+    .line-horizontal {
+      border: dashed;
+    }
+    .img-add {
+      border: 1px solid #eeeeee;
+    }
 </style>
 
-<div class="container">  
-  <div class="col-md-8 col-md-offset-2 ">  
+<div class="container">
     
-    <p>
+    <div class="row text-center">
       <% @properties.each do |property| %>
         <% property.images.each do |image| %>
           <%= cl_image_tag(image.path, { size: '', crop: :fit }) %>
-        <% end %>         
-    </p>
+        <% end %>
+    </div>
 
     <div class="row">
       <p>
-        <strong>Name:</strong>
       <h3><%= property.name %></h3>
       </p>
     </div>
@@ -50,7 +53,6 @@
 
       <div class="col-lg-6">
 
-
         <p class="garis-bawah">
           <strong>Bathroom:</strong>
           <h4><%= property.bathroom %></h4>
@@ -67,16 +69,51 @@
         </p>
 
         <p class="garis-bawah">
-          <strong>Description:</strong>
+          <strong>Keterangan Tambahan:</strong>
         <h4></h4>
         </p>
 
-        <% end %>
       </div>
+    </div>
+    <br>
+    <div class="row line-horizontal"></div>
+    <br>
+    <div class="row img-add">
+      <div class="col-lg-6">
+        <%= image_tag(property.image_url, width: "400") %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= property.image_description %></div>
+      </div>
+      <div class="col-lg6">
+        <%= image_tag(property.image_url2, width: "400") %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= property.image_description2 %></div>
+      </div>
+    </div>
+    <div class="row img-add">
+      <div class="col-lg-6">
+        <%= image_tag(property.image_url3, width: "400") %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= property.image_description3 %></div>
+      </div>
+      <div class="col-lg6">
+        <%= image_tag(property.image_url4, width: "400") %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= property.image_description4 %></div>
+      </div>
+    </div>
+    <div class="row img-add">
+      <div class="col-lg-6">
+        <%= image_tag(property.image_url5, width: "400") %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= property.image_description5 %></div>
+      </div>
+      <div class="col-lg6">
+        <%= image_tag(property.image_url6, width: "400") %>
+        <div><i class="fa fa-sticky-note-o"></i>&nbsp;<%= property.image_description6 %></div>
+      </div>
+    </div>
+  <% end %>
 
+    <div class="row">
+      <%= render 'contacts/form' %>
     </div>
 
-  </div>  
 </div>
 
 <br><br>

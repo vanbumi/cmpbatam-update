@@ -80,6 +80,6 @@ class BannersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def banner_params
-      params.require(:banner).permit(:name, :description, :images, :banner1, :banner2, :banner3, :banner4, :banner5)
+      params.require(:banner).permit(:name, :description, :images, :banner1, :banner2, :banner3, :banner4, :banner5, :banner6)
     end
 end
