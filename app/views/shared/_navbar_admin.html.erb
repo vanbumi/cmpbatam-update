@@ -50,11 +50,11 @@
             <li role="separator" class="divider"></li>
             <li><% if user_signed_in? %>
                     <li>
-                      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                      <%= link_to(' Logout', destroy_user_session_path, :method => :delete, class: "glyphicon glyphicon-off") %>
                     </li>
                 <% else %>
                     <li>
-                      <%= link_to('Login', new_user_session_path)  %>
+                      <%= link_to(' Login', new_user_session_path, class: "glyphicon glyphicon-log-in")  %>
                     </li>
                 <% end %>
             </li>
