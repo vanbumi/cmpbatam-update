@@ -9,9 +9,9 @@ class PropertiesController < ApplicationController
   # GET /properties.json
   def index
     @q = Property.ransack(params[:q])
-    @properties = @q.result.order("created_at DESC").page(params[:page]).per_page(5)
+    @properties = @q.result.where("active = 'Yes'").order("created_at DESC").page(params[:page]).per_page(5)
 
-    @jumlah_prop = Property.count
+    @jumlah_prop = Property.where("active = 'Yes'").count
 
     # @properties = Property.search(params[:search]).order("created_at DESC").page(params[:page]).per_page(5)
     
@@ -79,6 +79,6 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:name, :slug, :location, :status, :property_type, :bedroom, :bathroom, :price, :area, :image_url, :image_url2, :image_url3, :image_url4, :image_url5, :image_url6, :image_description, :image_description2, :image_description3, :image_description4, :image_description5, :image_description6, images: [])
+      params.require(:property).permit(:name, :slug, :location, :status, :property_type, :bedroom, :bathroom, :price, :area, :image_url, :image_url2, :image_url3, :image_url4, :image_url5, :image_url6, :image_description, :image_description2, :image_description3, :image_description4, :image_description5, :image_description6, :active, images: [])
     end
 end

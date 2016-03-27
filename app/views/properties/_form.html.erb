@@ -53,6 +53,17 @@
     <%= f.attachinary_file_field :images %>
   </div>
 
+  <div>
+    <%= f.label :active, 'Aktivasi' %>
+    <%= f.select(:active, options_for_select([
+             ['Yes','Yes'],
+             ['No','No']]),
+
+          {:prompt => "Pilih.."},
+          {class: "form-control"}
+        ) %>
+  </div>
+
   <br>
 
   <h3>Upload another Foto via <a href="http://cloudinary.com/">Cloudinary</a></h3>

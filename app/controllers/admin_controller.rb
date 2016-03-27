@@ -5,7 +5,7 @@ class AdminController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @jumlah_prop    = Property.count
+    @jumlah_prop    = Property.where("active = 'Yes'").count
     @jumlah_banner  = Banner.count
     @jumlah_user    = User.count
 
