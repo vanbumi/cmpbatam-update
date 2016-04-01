@@ -20,13 +20,14 @@
           <%= cl_image_tag(image.path, { size: '', crop: :fit }) %>
         <% end %>
     </div>
-
+    <br>
     <div class="row">
       <p>
-      <h3><%= property.name %></h3>
+        <h3><%= property.name %></h3>
       </p>
     </div>
-
+    <br>
+    <!-- detail -->
     <div class="row">
       <div class="col-lg-6">
 
@@ -75,9 +76,12 @@
 
       </div>
     </div>
+
     <br>
     <div class="row line-horizontal"></div>
-    <br>
+    <br><br>
+
+    <h3>Detail Gambar</h3>
     <div class="row img-add">
       <div class="col-lg-6">
         <%= image_tag(property.image_url, width: "400") %>
@@ -109,10 +113,46 @@
       </div>
     </div>
   <% end %>
+  <br><br>
 
-    <div class="row">
-      <%= render 'contacts/form' %>
+  <!--form comment    -->
+  <div class="row">
+
+    <div class="col-lg-6">
+      <h4>Komentar</h4>
+
+      <div id="content"></div>
+
+      <script type="text/babel">
+        // tutorial1-raw.js
+        var CommentBox = React.createClass({
+          render: function() {
+            return(
+              <div className="commentBox">
+                Hello, world! This is a Commentbox.
+              </div>
+            );
+          }
+        });
+        ReactDOM.render(
+          <CommentBox />,
+          document.getElementById('content')
+        );
+
+
+
+      </script>
+
     </div>
+
+      <div class="col-lg-6">
+        <h4>Kontak Kami</h4>
+        <%= render 'contacts/form' %>
+      </div>
+
+
+  </div>
+
 
 </div>
 
