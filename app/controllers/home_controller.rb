@@ -22,7 +22,7 @@ class HomeController < ApplicationController
   def landing
 
     @q = Property.ransack(params[:q])
-    @properties = @q.result.where("active = ?", "Yes").order("created_at DESC").page(params[:page]).per_page(6)
+    @properties = @q.result.where("active = ?", "Yes").order("created_at DESC").page(params[:page]).per_page(15)
   	# @properties = Property.where("active = 'Yes'").order("created_at DESC").page(params[:page]).per_page(6)
 
     @properties_slide = Property.where("banner = '1'")

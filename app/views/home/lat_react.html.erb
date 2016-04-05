@@ -67,19 +67,21 @@
 
 </style>
 
-<h2>How to write React Component</h2>
+<h2><u>How to write React Component</u></h2>
 
-<div id="compo" style="color: #0000FF"></div>
+<div id="compo"></div>
 
 <script type="text/babel">
-
+//  to create variable and make it new class
   var Hello = React.createClass({
+
     render: function() {
       return(
           <h3>Hello World!</h3>
       )
     }
   });
+//  to display on browser
   ReactDOM.render(
       < Hello />,
       document.getElementById("compo")
@@ -87,7 +89,84 @@
 
 </script>
 
+<h2><u>Property or Prop</u></h2>
 
+<div id="propx"></div>
+
+<script type="text/babel">
+  //  to create variable and make it new class
+  var Hello = React.createClass({
+    render: function() {
+      return(
+          <h3>Hello {this.props.name}! </h3>
+      )
+    }
+  });
+
+  //  to display on browser
+  ReactDOM.render(
+  < Hello name="Dyo" />,
+      document.getElementById("propx")
+  );
+</script>
+
+<h2><u>How Create Default Props</u></h2>
+
+<div id="propx1"></div>
+
+<script type="text/babel">
+  //  to create variable and make it new class
+  var Hello = React.createClass({
+
+    //Create Default Props function
+    getDefaultProps: function() {
+      return {
+        name: 'Brandon'
+      }
+    },
+
+    render: function() {
+      return(
+          <h3>Hello {this.props.name}! </h3>
+      )
+    }
+  });
+
+  //  to display on browser
+  ReactDOM.render(
+  < Hello/>,
+      document.getElementById("propx1")
+  );
+</script>
+
+<br>
+
+<div class="container">
+<pre>
+var Hello = React.createClass({
+
+  //Create Default Props function
+  getDefaultProps: function() {
+    return {
+      name: 'Brandon'
+    }
+  },
+
+  render: function() {
+    return(
+        &lt;h3&gt;Hello {this.props.name}! &lt;/h3&gt;
+    )
+  }
+});
+
+ReactDOM.render(
+&lt; Hello /&gt;,
+  document.getElementById("propx1")
+);
+</pre>
+</div><br>
+
+<h2><u>Working with State</u></h2>
 
 
 
