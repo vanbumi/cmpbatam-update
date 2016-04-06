@@ -38,7 +38,7 @@
               <%= cl_image_tag(image.path, { size: '325x325', crop: :fit }) %>
             <% end %>
           </td>
-          
+
           <td>
             <dl>
               <dt><h3><%= property.name %> <br>
@@ -61,7 +61,7 @@
               <dd><i class="fa fa-check"></i>&nbsp;Harga Rp.: <h4><%= number_to_currency(property.price, precision: 0, unit: "Rp.", separator: "", delimiter: ".") %></h4></dd>
             </dl>
           </td>
-          
+
           <td><i class="fa fa-eye"></i>&nbsp;<%= link_to 'Show', property %></td>
           <% if user_signed_in? %>
             <td><i class="fa fa-pencil-square-o"></i><%= link_to 'Edit', edit_property_path(property) %></td>

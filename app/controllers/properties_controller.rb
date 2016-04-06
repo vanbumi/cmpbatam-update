@@ -9,7 +9,13 @@ class PropertiesController < ApplicationController
   # GET /properties.json
   def index
     @q = Property.ransack(params[:q])
-    @properties = @q.result.order("created_at DESC").page(params[:page]).per_page(20)
+
+    if user_signed_in?
+      @properties = @q.result.order("created_at DESC").page(params[:page]).per_page(20)
+    else
+      @properties = @q.result.where("active = '1' ").order("created_at DESC").page(params[:page]).per_page(20)
+    end
+
 
     @jumlah_prop = Property.where("active = '1'").count
 
