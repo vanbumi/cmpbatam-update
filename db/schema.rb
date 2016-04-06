@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327062857) do
+ActiveRecord::Schema.define(version: 20160405123311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,19 @@ ActiveRecord::Schema.define(version: 20160327062857) do
     t.text     "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "cprofiles", force: :cascade do |t|
+    t.string   "company_name"
+    t.string   "company_phone"
+    t.string   "company_mail"
+    t.text     "company_address"
+    t.string   "company_owner"
+    t.string   "company_web"
+    t.text     "company_description"
+    t.string   "company_logo"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "properties", force: :cascade do |t|

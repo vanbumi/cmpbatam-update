@@ -1,0 +1,49 @@
+<%= form_for(@cprofile) do |f| %>
+  <% if @cprofile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cprofile.errors.count, "error") %> prohibited this cprofile from being saved:</h2>
+
+      <ul>
+      <% @cprofile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_name %><br>
+    <%= f.text_field :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :company_phone %><br>
+    <%= f.text_field :company_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :company_mail %><br>
+    <%= f.text_field :company_mail %>
+  </div>
+  <div class="field">
+    <%= f.label :company_address %><br>
+    <%= f.text_area :company_address %>
+  </div>
+  <div class="field">
+    <%= f.label :company_owner %><br>
+    <%= f.text_field :company_owner %>
+  </div>
+  <div class="field">
+    <%= f.label :company_web %><br>
+    <%= f.text_field :company_web %>
+  </div>
+  <div class="field">
+    <%= f.label :company_description %><br>
+    <%= f.text_area :company_description %>
+  </div>
+  <div class="field">
+    <%= f.label :company_logo %><br>
+    <%= f.text_field :company_logo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

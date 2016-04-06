@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Company Profiles</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company phone</th>
+      <th>Company mail</th>
+      <!--<th>Company address</th>-->
+      <th>Company owner</th>
+      <th>Company web</th>
+      <!--<th>Company description</th>-->
+      <!--<th>Company logo</th>-->
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cprofiles.each do |cprofile| %>
+      <tr>
+        <td><%= cprofile.company_name %></td>
+        <td><%= cprofile.company_phone %></td>
+        <td><%= cprofile.company_mail %></td>
+        <!--<td><%= cprofile.company_address %></td>-->
+        <td><%= cprofile.company_owner %></td>
+        <td><%= cprofile.company_web %></td>
+        <!--<td><%= cprofile.company_description %></td>-->
+        <!--<td><%= cprofile.company_logo %></td>-->
+        <td><%= link_to 'Show', cprofile %></td>
+        <td><%= link_to 'Edit', edit_cprofile_path(cprofile) %></td>
+        <td><%= link_to 'Destroy', cprofile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cprofile', new_cprofile_path %>

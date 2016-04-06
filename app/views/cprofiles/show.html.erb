@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @cprofile.company_name %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @cprofile.company_phone %>
+</p>
+
+<p>
+  <strong>Company mail:</strong>
+  <%= @cprofile.company_mail %>
+</p>
+
+<p>
+  <strong>Company address:</strong>
+  <%= @cprofile.company_address %>
+</p>
+
+<p>
+  <strong>Company owner:</strong>
+  <%= @cprofile.company_owner %>
+</p>
+
+<p>
+  <strong>Company web:</strong>
+  <%= @cprofile.company_web %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @cprofile.company_description %>
+</p>
+
+<p>
+  <strong>Company logo:</strong>
+  <%= @cprofile.company_logo %>
+</p>
+
+<%= link_to 'Edit', edit_cprofile_path(@cprofile) %> |
+<%= link_to 'Back', cprofiles_path %>

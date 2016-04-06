@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :cprofiles, path: 'admin/company-profiles'
+
   resources :contacts
+
   resources :banners, path: 'admin/banners'
 
   # devise_for :users
