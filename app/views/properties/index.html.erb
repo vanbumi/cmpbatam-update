@@ -41,7 +41,14 @@
           
           <td>
             <dl>
-              <dt><h3><%= property.name %></h3></dt>
+              <dt><h3><%= property.name %> <br>
+                <% if property.active == '1' %>
+                  <small><span class="label label-success">Active</span></small>
+                <% else %>
+                  <small><span class="label label-danger">Not Active</span></small>
+                <% end %>
+                </h3>
+              </dt>
               <p>Alias:<%= property.slug %></p>
               <dd><i class="fa fa-calendar"></i>&nbsp;<span class='label label-primary'>Tanggal: <%= property.created_at.strftime(" %d %B %Y, %H:%M ") %></span></dd>
               <dd><i class="fa fa-check"></i>&nbsp;Lokasi: <%= property.location %></dd>
@@ -55,7 +62,7 @@
             </dl>
           </td>
           
-          <td><i class="fa fa-eye"></i>&nbsp;<%= link_to 'Show Detail', property %></td>
+          <td><i class="fa fa-eye"></i>&nbsp;<%= link_to 'Show', property %></td>
           <% if user_signed_in? %>
             <td><i class="fa fa-pencil-square-o"></i><%= link_to 'Edit', edit_property_path(property) %></td>
             <td><i class="fa fa-trash"></i>&nbsp;<%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>

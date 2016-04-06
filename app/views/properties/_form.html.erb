@@ -47,21 +47,20 @@
     <%= f.label :area %><br>
     <%= f.text_field :area, class:"form-control" %>
   </div>
-
+    <br>
   <div class="field">
     <%= f.label :upload_image, "Upload Foto Utama" %><br>
     <%= f.attachinary_file_field :images %>
   </div>
-
+    <br>
   <div>
-    <%= f.label :active, 'Aktivasi' %>
+    <%= f.label :active, 'List Aktif' %>
     <%= f.select(:active, options_for_select([
-             ['Yes','Yes'],
-             ['No','No']]),
-
-          {:prompt => "Pilih.."},
-          {class: "form-control"}
-        ) %>
+           ['Yes','1'],
+           ['No','2']], @property.active),
+           {:prompt => "Pilih.."},
+           {class: "form-control"}
+    ) %>
   </div>
 
   <br>
