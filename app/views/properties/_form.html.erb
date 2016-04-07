@@ -21,16 +21,58 @@
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_field :location, class:"form-control" %>
+    <%= f.select(:location, options_for_select([
+          ['Baloi','Baloi'],
+          ['Barelang','Barelang'],
+          ['Batam Center','Batam Center'],
+          ['Botania','Botania'],
+          ['Batam Kota','Batam Kota'],
+          ['Batu Aji','Batu Aji'],
+          ['Batu Ampar','Batu Ampar'],
+          ['Bengkong','Bengkong'],
+          ['Jodoh','Jodoh'],
+          ['Muka Kuning','Muka Kuning'],
+          ['Nagoya','Nagoya'],
+          ['Sei Panas','Sei Panas'],
+          ['Sekupang','Sekupang'],
+          ['Sukajadi','Sukajadi'],
+          ['Tg Piayu','Tg Piayu'],
+          ['Tiban','Tiban']
+        ], @property.location
+      ),
+         {:prompt => "Pilih.."},
+         {class: "form-control"}
+      ) %>
   </div>
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.text_field :status, class:"form-control" %>
+
+    <%= f.select(:status, options_for_select([
+          ['For Rent', 'For Rent'],
+          ['For Sale', 'For Sale'],
+          ['Sold !', 'Sold !' ],
+          ['Leased !', 'Leased !']
+      ]),
+         {:prompt => "Pilih.."},
+         {:class => "form-control"}
+    ) %>
   </div>
   <div class="field">
     <%= f.label :property_type %><br>
-    <%= f.text_field :property_type, class:"form-control" %>
+    <%= f.select(:property_type, options_for_select([
+                     ['Rumah', 'Rumah'],
+                     ['Apartemen', 'Apartemen'],
+                     ['Kantor', 'Kantor' ],
+                     ['Ruko', 'Ruko'],
+                     ['Tanah', 'Tanah'],
+                     ['Gudang', 'Gudang']
+                 ], @property.property_type
+              ),
+                 {:prompt => "Pilih.."},
+                 {:class => "form-control"}
+        ) %>
   </div>
+
   <div class="field">
     <%= f.label :bedroom %><br>
     <%= f.number_field :bedroom, class:"form-control" %>

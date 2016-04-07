@@ -35,9 +35,10 @@
 
           <ul class="dropdown-menu">
             <% if user_signed_in? %>
-              <li><a href="#">Hello: <%= current_user.email %> </a></li>
+              <li><a href="#"><i class="fa fa-star text-primary"></i>&nbsp;<span class="label label-primary">Hai&nbsp;<%= current_user.name %></span></a></li>
+              <li role="separator" class="divider"></li>
               <li>
-                <%= link_to('Edit registration', edit_user_registration_path) %>
+                <%= link_to(' Change Password', edit_user_registration_path, class: "fa fa-product-hunt") %>
               </li>
             <% else %>
               <li>
@@ -45,8 +46,8 @@
               </li>
             <% end %>
 
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="#"><i class="fa fa-male"></i>&nbsp;&nbsp;Change Profile</a></li>
+            <li><a href="/admin/properties"><i class="fa fa-th-list"></i>&nbsp;Product Listing</a></li>
             <li role="separator" class="divider"></li>
             <li><% if user_signed_in? %>
                     <li>
