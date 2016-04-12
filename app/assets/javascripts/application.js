@@ -14,3 +14,8 @@
 //= require jquery_ujs
 
 //= require_tree .
+
+
+var properties_core = {
+
+};

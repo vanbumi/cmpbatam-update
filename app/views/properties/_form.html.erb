@@ -13,12 +13,14 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name, class:"form-control" %>
+    <%= f.text_field :name, class:"form-control"  %>
   </div>
+
   <div class="field">
     <%= f.label :alias %><br>
-    <%= f.text_field :slug, class:"form-control" %>
+    <%= f.text_field :slug, class:"form-control", :value => @property.name %>
   </div>
+
   <div class="field">
     <%= f.label :location %><br>
     <%= f.select(:location, options_for_select([
@@ -169,11 +171,3 @@
     <%= f.submit class:"btn btn-lg btn-primary" %>
   </div>
 <% end %>
-
-<script>
-  $function() {
-    $('.actions').click(function() {
-      $('#image_url').append();
-    });
-  };
-</script>

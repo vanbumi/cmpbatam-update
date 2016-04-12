@@ -33,6 +33,7 @@ class PropertiesController < ApplicationController
     @property = Property.new
   end
 
+
   # GET /properties/1/edit
   def edit
   end
