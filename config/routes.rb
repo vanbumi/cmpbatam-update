@@ -45,7 +45,7 @@ Rails.application.routes.draw do
    root 'home#develop'
 
    # we use this on production ----->
-   # root 'home#landing'
+   root 'home#landing'
 
    mount Attachinary::Engine => "/attachinary"
    
