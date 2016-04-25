@@ -357,10 +357,92 @@
 
   </script>
 
+  <h2>jQuery</h2>
 
+  <div class="well clearfix">
+    <textarea class="form-control"></textarea><br>
+    <span>140</span>
+    <button class="js-tweet-button btn btn-primary pull-right" disabled>Tweet</button>
+    <button class="js-add-photo-button btn btn-success pull-right">Add Photo</button>
+  </div>
 
+  <script type="text/javascript" charset="utf-8">
+    // Initially disable the button
+    // $("button").prop("disabled", true);
 
+    // When the value of the text area changes...
 
+    $("textarea").on("input", function() {
+      $("span").text(140 - $(this).val().length);
+
+      // onclick
+      $(".js-tweet-button").on("click", function() {
+        if (this)
+      })
+      // If there's at least one character...
+      if ($(this).val().length > 0) {
+        // Enable the button.
+        $(".js-tweet-button").prop("disabled", false);
+      } else {
+        // Else, disable the button.
+        $(".js-tweet-button").prop("disabled", true);
+      }
+    });
+  </script>
+
+<h2>The Tweet Box Using React.js</h2>
+
+<div id="twitbox"></div>
+
+  <script type="text/babel">
+    var TweetBox = React.createClass({
+      getInitialState: function() {
+        return {
+          text: ""
+        };
+      },
+      handleChange: function(event) {
+        this.setState({text: event.target.value})
+      },
+      render: function() {
+        return(
+          <div className="well clearfix">
+            <textarea className="form-control" onChange={this.handleChange}></textarea><br/>
+            <button className="btn btn-primary pull-right" disabled={this.state.text.length === 0}>Tweet</button>
+            <br />
+            <span>{140 - this.state.text.length}</span>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+        <TweetBox />,
+        document.getElementById("twitbox")
+    );
+
+  </script>
+
+  <h2>Latihan</h2>
+
+  <div id="loha"></div>
+
+  <script type="text/babel">
+    var TweetBox = React.createClass({
+      render: function() {
+        return(
+          <div>
+            <span>Hello</span>
+            <span>World!</span>
+          </div>
+        );
+      }
+    });
+    ReactDOM.render(
+    <TweetBox />,
+        document.getElementById("loha")
+    );
+  </script>
 
 
   <br><br>

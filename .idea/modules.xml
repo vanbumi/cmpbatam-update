@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cmpbatam.iml" filepath="$PROJECT_DIR$/.idea/cmpbatam.iml" />
       <module fileurl="file://$USER_HOME$/sites_react/indorails-react4-everyone/.idea/indorails-react4-everyone.iml" filepath="$USER_HOME$/sites_react/indorails-react4-everyone/.idea/indorails-react4-everyone.iml" />
+      <module fileurl="file://$USER_HOME$/sites_lat/movier/.idea/movier.iml" filepath="$USER_HOME$/sites_lat/movier/.idea/movier.iml" />
     </modules>
   </component>
 </project>
