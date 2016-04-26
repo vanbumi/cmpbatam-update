@@ -23,7 +23,7 @@ class AdminController < ApplicationController
     @tanah_forrent      = Property.where("status = 'For Rent' AND property_type = 'Tanah' ").count
     @townh_forrent      = Property.where("status = 'For Rent' AND property_type = 'Town House' ").count
 
-
+    flash[:notice] = "Anda tidak berhak masuk, hanya untuk Super Admin"
 
   end
 end

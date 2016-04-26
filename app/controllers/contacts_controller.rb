@@ -1,5 +1,7 @@
 class ContactsController < ApplicationController
 
+  layout 'admin_layout'
+
   before_action :authenticate_user!, except: [:show, :create]
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
 

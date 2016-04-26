@@ -96,7 +96,11 @@
                 <table class="table">
                   <tr>
                     <td>
-                      <span class="glyphicon glyphicon-th-list text-primary"></span><a href="/admin/users">User List</a>
+                      <% if current_user.admin == TRUE %>
+                        <span class="glyphicon glyphicon-th-list text-primary"></span><a href="/admin/users">User List</a>
+                      <% else %>
+                          <span class="glyphicon glyphicon-th-list text-primary"></span><a href="">User List</a>
+                      <% end %>
                     </td>
                   </tr>
                     <tr>
