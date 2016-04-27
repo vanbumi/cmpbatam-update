@@ -95,6 +95,26 @@
   </div>
     <br>
   <div class="field">
+    <%= f.label :luas_bangunan %><br>
+    <%= f.text_field :luas_bangunan, class:"form-control" %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :luas_tanah %><br>
+    <%= f.text_field :luas_tanah, class:"form-control" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :main_fasility, 'Fasilitas' %><br>
+    <%= f.text_field :main_fasility, class:"form-control" %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :main_description, 'Keterangan Tambahan' %><br>
+    <%= f.text_area :main_description, class:"form-control" %>
+  </div>
+    <br>
+  <div class="field">
     <%= f.label :upload_image, "Upload Foto Utama" %><br>
     <%= f.attachinary_file_field :images %>
   </div>

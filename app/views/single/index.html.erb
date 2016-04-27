@@ -50,14 +50,15 @@
           <strong>Bedroom:</strong>
         <h4><%= property.bedroom %></h4>
         </p>
-      </div>
-
-      <div class="col-lg-6">
 
         <p class="garis-bawah">
           <strong>Bathroom:</strong>
-          <h4><%= property.bathroom %></h4>
+        <h4><%= property.bathroom %></h4>
         </p>
+
+      </div>
+
+      <div class="col-lg-6">
 
         <p class="garis-bawah">
           <strong>Price:</strong>
@@ -70,11 +71,28 @@
         </p>
 
         <p class="garis-bawah">
-          <strong>Keterangan Tambahan:</strong>
-        <h4></h4>
+          <strong>Luas Bangunan:</strong>
+        <h4><%= property.luas_bangunan %></h4>
         </p>
 
+        <p class="garis-bawah">
+          <strong>Luas Tanah:</strong>
+        <h4><%= property.luas_tanah %></h4>
+        </p>
+
+        <p class="garis-bawah">
+          <strong>Fasilitas:</strong>
+        <h4><%= property.main_fasility %></h4>
+        </p>
+
+
+
       </div>
+    </div>
+    <div class="row">
+      <p class="garis-bawah">
+        <strong>Keterangan Tambahan:</strong>
+      <h4><%= property.main_description %></h4>
     </div>
 
     <br>
@@ -119,23 +137,16 @@
   <div class="row">
 
     <div class="col-lg-6">
-      <h4>Komentar</h4>
+      <h4><b>Kami mempersembahkan yang terbaik untuk anda</b></h4>
+      <br/>
 
       <div id="content"></div>
 
       <script type="text/babel">
         // tutorial1-raw.js
-        var CommentBox = React.createClass({
-          render: function() {
-            return(
-              <div className="commentBox">
-                Hello, world! This is a Commentbox.
-              </div>
-            );
-          }
-        });
+
         ReactDOM.render(
-          <CommentBox />,
+          <img src="http://res.cloudinary.com/cmp-batam/image/upload/c_scale,h_258,w_400/v1460107221/logocmp_yxxtha.png" />,
           document.getElementById('content')
         );
 
@@ -146,14 +157,12 @@
     </div>
 
       <div class="col-lg-6">
-        <h4>Kontak Kami</h4>
+        <h4><b>Kontak Kami</b></h4>
         <%= render 'contacts/form' %>
       </div>
-
-
   </div>
-
-
 </div>
 
 <br><br>
+
+<%= render 'shared/footer' %>
