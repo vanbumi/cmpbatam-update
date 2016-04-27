@@ -17,8 +17,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :alias %>&nbsp;<span class="alert alert-danger" role="alert">Cara menulis Alias: semua huruf kecil, tanpa spasi, spasi ganti dengan (-) Contoh: <b>di-jual-rumah-puriloka</b></span><br>
-    <%= f.text_field :slug, class:"form-control", :value => @property.name %>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Cara menulis Alias</strong>: semua huruf kecil, tanpa spasi, spasi ganti dengan (-) Contoh: <b>di-jual-rumah-puriloka</b></span>.
+    </div>
+    <%= f.label :alias %> (Slug)<br>
+    <%= f.text_field :slug, class:"form-control", :placeholder => 'CONTOH PENULISAN ALIAS: dijual-rumah-mewah-batam-center' %>
   </div>
 
   <div class="field">
