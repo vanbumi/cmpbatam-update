@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03a862a3-11fa-4b57-8828-0adc8b5cac98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/property.rb" afterPath="$PROJECT_DIR$/app/models/property.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/properties/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/properties/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_s_search.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_s_search.html.erb" />
     </list>
     <ignored path="cmpbatam.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,17 +45,27 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/properties/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="36.666668">
+            <state vertical-scroll-proportion="-37.333332">
               <caret line="68" column="26" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="property.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_s_search.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home/_s_search.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.1818181">
+              <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="property.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/property.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.08510638">
+            <state vertical-scroll-proportion="0.0">
               <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
               <folding />
             </state>
@@ -91,7 +99,6 @@
         <option value="$PROJECT_DIR$/app/views/cprofiles/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/properties/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/_s_search.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_navbar_admin.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
@@ -132,6 +139,7 @@
         <option value="$PROJECT_DIR$/app/views/shared/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/views/properties/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/property.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/_s_search.html.erb" />
       </list>
     </option>
   </component>
@@ -653,13 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_s_search.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="41" selection-start-line="91" selection-start-column="41" selection-end-line="91" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_navbar_admin.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1128609">
@@ -990,18 +991,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/property.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/properties/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="36.666668">
+        <state vertical-scroll-proportion="-37.333332">
           <caret line="68" column="26" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/property.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/_s_search.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08510638">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state vertical-scroll-proportion="1.1818181">
+          <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
           <folding />
         </state>
       </provider>
