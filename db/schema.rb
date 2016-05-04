@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427102826) do
+ActiveRecord::Schema.define(version: 20160503081214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,11 +76,11 @@ ActiveRecord::Schema.define(version: 20160427102826) do
     t.integer  "bathroom"
     t.decimal  "price"
     t.string   "area"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "images"
     t.string   "slug"
-    t.boolean  "banner",             default: false
+    t.boolean  "banner",              default: false
     t.string   "image_url"
     t.string   "image_url2"
     t.string   "image_url3"
@@ -98,6 +98,18 @@ ActiveRecord::Schema.define(version: 20160427102826) do
     t.string   "main_fasility"
     t.string   "luas_bangunan"
     t.string   "luas_tanah"
+    t.string   "image_url7"
+    t.string   "image_url8"
+    t.string   "image_url9"
+    t.string   "image_url10"
+    t.string   "image_url11"
+    t.string   "image_url12"
+    t.string   "image_description7"
+    t.string   "image_description8"
+    t.string   "image_description9"
+    t.string   "image_description10"
+    t.string   "image_description11"
+    t.string   "image_description12"
   end
 
   create_table "users", force: :cascade do |t|
